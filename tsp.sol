@@ -13,7 +13,6 @@
     K 18  12  13  25  22  37  84  13  18  38  0
 */
 
-
 //check date logic
 
 pragma solidity ^0.5.6;
@@ -32,8 +31,13 @@ contract TSP {
         //require(x < length-1 && y < length-1);
         return graph[length*x + y];
     }
-    function sqrt(){
-        
+    function sqrt(uint x) public returns (uint y) {
+        uint z = (x + 1) / 2;
+        y = x;
+        while (z < y) {
+            y = z;
+            z = (x / z + z) / 2;
+        }
     }
     function validate_solution(){
         //check for default
