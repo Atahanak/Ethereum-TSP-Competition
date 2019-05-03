@@ -47,7 +47,7 @@ contract TSP {
     /*function sqrt(){
         
     }*/
-    function validate_solution (uint256[] memory solution) public returns(bool) {
+    function validate_solution (uint256[] memory solution) private returns(bool) {
         require(solution.length == length);
 
         uint256[] memory visited = new uint256[](length/256 + 1);
