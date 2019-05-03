@@ -13,29 +13,32 @@
     K 18  12  13  25  22  37  84  13  18  38  0
 */
 /*
-    0   1   2
+    0   1   2   3
 
-0   0   3   6
+0   0   3   6   1
 
-1   3   0   5
+1   3   0   5   2
 
-2   6   5   0
+2   6   5   0   10
 
-[0, 3, 6, 3, 0, 5, 6, 5, 0], 3
+3   1   2   10  0
+
+[0, 3, 6, 1, 3, 0, 5, 2, 6, 5, 0, 10, 1, 2, 10, 0], 4
 */
 pragma solidity ^0.5.6;
 
 contract TSP {
     uint256[] graph;
     uint256 length;
-    uint256 bestSolution;
+    uint256 best_solution;
+    address winner;
     //deadline date
-    //adderess of the current best solution
-    //cost and path of the current best solution
+
     constructor(uint256[] memory input_graph, uint256 input_length) public {
         length = input_length;
         graph = input_graph;
-        bestSolution = 1000000; //temp
+        winner = address(this);
+        best_solution = 1000000; //temporary number
     }
     function getCoordinate(uint256 x, uint256 y) public view returns (uint256){
         require(x < length && y < length);
@@ -61,7 +64,7 @@ contract TSP {
                 solLength += getCoordinate(solution[i-1], solution[i]); //calculate the total sum
             }
         }
-        solLength += getCoordinate(solution[0], solution[length]); //the distance from last node to start
+        solLength += getCoordinate(solution[0], solution[length-1]); //the distance from last node to start
         
         /*uint256 bitVectorCheckNum = (1 << 255) + ((1 << 255) - 1); //helper number 
         for(uint256 i = 0; i < visited.length && isCorrect; i++){ //check if all nodes are visited
@@ -71,19 +74,26 @@ contract TSP {
         }*/ //not needed since length and visited check gurantees that all nodes are visited
         
         if(isCorrect){ //check the correctness of the solution
-            if(solLength < bestSolution){
-                bestSolution = solLength; //update solution
-                //update winner address
+            if(solLength < best_solution){
+                best_solution = solLength; //update solution
+                winner = msg.sender;//update winner address
                 return true;
             }
         }
         return false;
     }
+    
+    //front end connection
     /*function upload_solution(){
         
     }*/
-    //front end
-    function display_GraphAndSolution() public view returns(uint256){
-     return bestSolution;   
+    function getGraph()public view returns(uint256[] memory){
+        return graph;
+    }
+    function getSolution() public view returns(uint256){
+        return best_solution;   
+    }
+    function getAddress() public view returns(address){
+        return winner;
     }
 }
