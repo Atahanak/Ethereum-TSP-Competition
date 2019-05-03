@@ -28,28 +28,37 @@
 pragma solidity ^0.5.6;
 
 contract TSP {
+
     uint256[] graph;
     uint256 length;
     uint256 best_solution;
-    address winner;
+    address payable winner;
+    uint closing_time;
+    bool finished;
+    uint256 prize = 20 ether;
     //deadline date
 
-    constructor(uint256[] memory input_graph, uint256 input_length) public {
+    constructor(uint256[] memory input_graph, uint256 input_length, uint deadline) payable public {
         length = input_length;
         graph = input_graph;
-        winner = address(this);
-        best_solution = 1000000; //temporary number
+        winner = address(uint160(address(this))); //put contract address as the winner
+        closing_time = now + deadline;
+        finished = false;
+        best_solution = 1000000; //temporary number will be changed
     }
     function getCoordinate(uint256 x, uint256 y) public view returns (uint256){
         require(x < length && y < length);
         return graph[length*x + y];
     }
+    function hasClosed() public view returns (bool) {
+        return now > closing_time;
+    }
     /*function sqrt(){
         
     }*/
     function validate_solution (uint256[] memory solution) private returns(bool) {
-        require(solution.length == length);
-
+        require(solution.length == length && !hasClosed());
+        
         uint256[] memory visited = new uint256[](length/256 + 1);
         uint256 solLength = 0;
         bool isCorrect = true;
@@ -76,17 +85,25 @@ contract TSP {
         if(isCorrect){ //check the correctness of the solution
             if(solLength < best_solution){
                 best_solution = solLength; //update solution
-                winner = msg.sender;//update winner address
                 return true;
             }
         }
         return false;
     }
     
-    //front end connection
-    /*function upload_solution(){
-        
-    }*/
+    function reward() public {
+        require(!finished && hasClosed());
+        finished = true;
+        winner.transfer(prize);
+    }
+    //FRONT END CONNECTION
+    //********************************************************
+    function upload_solution (uint256[] memory solution) public payable{
+        require(msg.value > 1 ether && !hasClosed());
+        if(validate_solution(solution)){
+            winner = msg.sender;//update winner address
+        }
+    }
     function getGraph()public view returns(uint256[] memory){
         return graph;
     }
@@ -96,4 +113,5 @@ contract TSP {
     function getAddress() public view returns(address){
         return winner;
     }
+    //********************************************************
 }
