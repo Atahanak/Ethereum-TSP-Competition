@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/crypto-wallet.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:58:25 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+        content="admin template, angular admin template, bootstrap admin template, modern admin template, modern design admin template, dashboard template, responsive admin template, angular web app, crypto dashboard, bitcoin dashboard">
+    <title>Cryptoggle</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../../assets/vendors/feather-icons/feather.css" rel="stylesheet" />
+    <link href="../../assets/vendors/%40fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/vendors/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="../../assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <!-- PAGE LEVEL VENDORS-->
+    <link href="../../assets/vendors/cryptocoins/cryptocoins.css" rel="stylesheet" /><!-- THEME STYLES-->
+    <link href="assets/css/app.min.css" rel="stylesheet" /><!-- PAGE LEVEL STYLES-->
+    <style>
+        .badge-lg-primary {
+            height: 44px;
+            width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #e9ecef;
+        }
+    </style>
+
+    <script src="C:/Users/Omer/Desktop/ethProj/node_modules/web3/dist/web3.min.js"></script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-wrapper">
+            <!-- BEGIN: Sidebar-->
+            <div class="page-sidebar custom-scroll" id="sidebar">
+                <div class="sidebar-header"><a class="sidebar-brand" href="index.html">Cryptoggle</a><a
+                        class="sidebar-brand-mini" href="index.html">Cr</a><span class="sidebar-points"><span
+                            class="badge badge-success badge-point mr-2"></span><span
+                            class="badge badge-danger badge-point mr-2"></span><span
+                            class="badge badge-warning badge-point"></span></span></div>
+                <ul class="sidebar-menu metismenu">
+                    <li class="heading"><span>MENU</span></li>
+                    <li><a href="home.html"><i class="sidebar-item-icon ft-home"></i><span
+                                class="nav-label">Home</span></a></li>
+                    <li><a href="login.html"><i class="sidebar-item-icon ft-x"></i><span
+                                class="nav-label">Exit</span></a></li>
+                </ul>
+            </div>
+
+            <!-- END: Sidebar-->
+            <!-- BEGIN: Content-->
+            <div class="content-area">
+                <!-- BEGIN: Header-->
+                <nav class="navbar navbar-expand navbar-light fixed-top header">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link navbar-icon sidebar-toggler" id="sidebar-toggler"
+                                href="#"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                                    class="icon-bar"></span></a></li>
+                        <li class="nav-item dropdown d-none d-sm-inline-block"><a
+                                class="nav-link dropdown-toggle megamenu-link" href="#"
+                                data-toggle="dropdown"><span>Apps<i class="ti-angle-down arrow ml-2"></i></span></a>
+                            <div class="dropdown-menu nav-megamenu" style="min-width: 400px">
+                                <div class="row m-0">
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i
+                                                class="ft-activity item-badge mb-4"></i>
+                                            <h5 class="mb-2">Activity</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div>
+                                        </a></div>
+                                    <div class="col-6"><a class="mega-menu-item bg-primary text-white" href="#"><i
+                                                class="ft-globe item-badge mb-4 text-white"></i>
+                                            <h5 class="mb-2">Customers</h5>
+                                            <div class="text-white font-12">Lorem Ipsum dolar.</div>
+                                        </a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i
+                                                class="ft-layers item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Projects</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div>
+                                        </a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i
+                                                class="ft-shopping-cart item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Orders</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link navbar-icon" href="javascript:;" data-toggle="modal"
+                                data-target="#search-modal"><i class="ft-search"></i></a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle navbar-icon"
+                                data-toggle="dropdown" href="#"><i class="ft-bell position-relative"></i><span
+                                    class="notify-signal bg-primary"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0" style="min-width: 350px">
+                                <div class="py-4 px-3 text-center text-white mb-3" style="background-color: #2c2f48;">
+                                    <h5 class="m-0">7 New Notifications</h5>
+                                </div>
+                                <div class="custom-scroll position-relative mb-3" style="height:320px;">
+                                    <div class="list-group list-group-flush"><a
+                                            class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-shopping-cart text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">2 New Orders</h6>
+                                                        <div class="text-muted font-13">15 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-server text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">Server overloaded 91%</h6>
+                                                        <div class="text-muted font-13">40 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-support text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">New support request</h6>
+                                                        <div class="text-muted font-13">1 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-info-alt text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">System Warning</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-email text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">You have 2 new messages</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i
+                                                    class="ti-user text-center font-20 text-primary mr-3"
+                                                    style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">24 new users registered</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                                <div class="px-3 py-2 text-center"><a class="hover-link font-13"
+                                        href="javascript:;">view all</a></div>
+                            </div>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item dropdown"><a
+                                class="nav-link dropdown-toggle no-arrow d-inline-flex align-items-center"
+                                data-toggle="dropdown" href="#"><span class="d-none d-sm-inline-block mr-2">John
+                                    Due</span><span class="position-relative d-inline-block"><img class="rounded-circle"
+                                        src="assets/img/users/admin-image.png" alt="image" width="36" /><span
+                                        class="badge-point badge-success avatar-badge"></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0 pb-4" style="min-width: 280px;">
+                                <div class="p-4 mb-4 media align-items-center text-white"
+                                    style="background-color: #2c2f48;"><img class="rounded-circle mr-3"
+                                        src="assets/img/users/admin-image.png" alt="image" width="55" />
+                                    <div class="media-body">
+                                        <h5 class="mb-1">Jonathan Due</h5>
+                                        <div class="font-13">Administrator</div>
+                                    </div>
+                                </div><a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="ft-user mr-3 font-18 text-muted"></i>Profile</a><a
+                                    class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="ft-message-square mr-3 font-18 text-muted"></i>Messages</a><a
+                                    class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="ft-settings mr-3 font-18 text-muted"></i>Settings</a>
+                                <div class="dropdown-divider my-3"></div>
+                                <div class="mx-4"><a class="btn btn-link p-0" href="#"><span class="btn-icon"><i
+                                                class="ft-power mr-2 font-18"></i>Logout</span></a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav><!-- END: Header-->
+                <div class="page-content fade-in-up">
+                    <!-- BEGIN: Page heading-->
+                    <div class="page-heading">
+                        <div class="page-breadcrumb">
+                            <h1 class="page-title page-title-sep">TSP Problem</h1>
+                        </div>
+                    </div><!-- BEGIN: Page content-->
+                    <div>
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3"><i class="badge-lg-primary text-success ti-align-right"
+                                                style="height: 54px;width: 54px;font-size: 26px;"></i></div>
+                                        <div class="mb-3 text-muted font-16">TSP DISTANCE MATRIX</div>
+                                        <div class="h3 mb-4">
+                                            <div id="divGraph">20</div>
+                                            <span class="font-weight-normal"></span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3"><i class="cc ETH-alt font-40 text-primary mr-2"
+                                                style="height: 54px;width: 54px;font-size: 26px;"></i></div>
+                                        <div class="mb-3 text-muted font-16">REWARD</div>
+                                        <div class="h3 mb-2"><span id="divPrize">20</span>
+                                            <span class="font-weight-normal">Wei</span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3"><i class="badge-lg-primary text-warning ti-info-alt"
+                                                style="height: 54px;width: 54px;font-size: 26px;"></i></div>
+                                        <div class="mb-3 text-muted font-16">IS COMPETITION OFF?</div>
+                                        <div class="h3 mb-2">
+                                            <span id="divTime">20</span>
+                                            <span class="font-weight-normal"></span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3"><i class="badge-lg-primary text-purple ti-user"
+                                                style="height: 54px;width: 54px;font-size: 26px;"></i></div>
+                                        <div class="mb-3 text-muted font-16">CURRENT SOLUTION</div>
+                                        <div class="h3 mb-4"><span id="divSolution">20</span>
+                                            <span class="font-weight-normal"></span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3"><i class="badge-lg-primary text-warning ti-server"
+                                                style="height: 54px;width: 54px;font-size: 26px;"></i></div>
+                                        <div class="mb-3 text-muted font-16">CURRENT SOLUTION COST</div>
+                                        <div class="h3 mb-4">
+                                            <div id="divSolutionCost">20</div>
+                                            <span class="font-weight-normal"></span>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card card-fullheight">
+                                    <div class="card-body">
+                                        <h5 class="box-title text-primary">UPLOAD SOLUTION</h5>
+                                        <form action="javascript:;">
+                                            <div class="form-group mb-4"><label class="active">Write your
+                                                    solution</label><input class="form-control" type="text"
+                                                    placeholder=". . ." id="inputSolution"></div>
+                                            <div class="form-group"><button class="btn btn-primary mr-2" type="submit"
+                                                    id="btnUploadSol">Submit</button><button class="btn btn-light"
+                                                    type="reset" id="btnClear">Clear</button></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- END: Page content-->
+                </div><!-- BEGIN: Footer-->
+
+
+
+                <footer class="page-footer flexbox">
+                    <div class="text-muted">2019 © <strong>Cryptoggle</strong>. All rights reserved</div>
+                </footer><!-- END: Footer-->
+            </div><!-- END: Content-->
+        </div>
+    </div><!-- BEGIN: Search form-->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 100px">
+            <div class="modal-content">
+                <form class="search-top-bar" action="#"><input class="form-control search-input" type="text"
+                        placeholder="Search..."><button class="reset input-search-icon" type="submit"><i
+                            class="ft-search"></i></button><button class="reset input-search-close" type="button"
+                        data-dismiss="modal"><i class="ft-x"></i></button></form>
+            </div>
+        </div>
+    </div><!-- END: Search form-->
+    <!-- BEGIN: Quick sidebar-->
+    <div class="quick-sidebar" id="quick-sidebar"><button class="close quick-sidebar-close js-close-backdrop"><span
+                aria-hidden="true">×</span></button>
+        <div class="px-4 quick-sidebar-header">
+            <ul class="nav nav-pills nav-pills-solid nav-justified w-100 mr-4">
+                <li class="nav-item mr-2"><a class="nav-link active" data-toggle="pill"
+                        href="#sidenav-tab-messages">Messages</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" data-toggle="pill"
+                        href="#sidenav-tab-settings">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-log">Logs</a></li>
+            </ul>
+        </div>
+
+    </div><!-- END: Quick sidebar-->
+    <!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+
+
+    <script>
+        var web3;
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        }
+        else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+
+        web3.eth.defaultAccount = web3.eth.accounts[0];
+        var TSPContract = web3.eth.contract([
+            {
+                "constant": false,
+                "inputs": [],
+                "name": "reward",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "solution",
+                        "type": "uint256[]"
+                    }
+                ],
+                "name": "upload_solution",
+                "outputs": [],
+                "payable": true,
+                "stateMutability": "payable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "name": "input_graph",
+                        "type": "uint256[]"
+                    },
+                    {
+                        "name": "input_length",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "deadline",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": true,
+                "stateMutability": "payable",
+                "type": "constructor"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getAddress",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getClosingTime",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "x",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "y",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getCoordinate",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getGraph",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256[]"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getNowtime",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getPrize",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getSolution",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "hasClosed",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]);
+
+        var TSP = TSPContract.at('0x98d450c9ff05c8c26c12d1e1bb5f96ce2dd5265c');
+        console.log(TSP);
+
+
+        TSP.getSolution(function (error, result) {
+            if (!error) {
+                $("#divSolutionCost").text(result);
+            }
+            else
+                console.error(error);
+        });
+
+        TSP.getAddress(function (error, result) {
+            if (!error) {
+                $("#divSolution").text(result);
+            }
+            else
+                console.error(error);
+        });
+
+        TSP.getPrize(function (error, result) {
+            if (!error) {
+                $("#divPrize").text(result);
+            }
+            else
+                console.error(error);
+        });
+
+        TSP.getGraph(function (error, result) {
+            if (!error) {
+                $("#divGraph").text(result);
+            }
+            else
+                console.error(error);
+        });
+
+
+        TSP.hasClosed(function (error, result) {
+            if (!error) {
+                if (result === false) {
+                    $("#divTime").text("Not yet!");
+                }
+                else {
+                    $("#divTime").text("Finished!");
+                }
+            }
+            else
+                console.error(error);
+        });
+
+        //upload solution method
+        $("#btnUploadSol").click(function (error) {
+            TSP.upload_solution($("#inputSolution").val());
+            console.log("Upload Solution Error -->", error);
+            
+        });
+
+        $("#btnClear").click(function (error) {
+            $("#inputSolution").val("");
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/crypto-wallet.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:58:26 GMT -->
+
+</html>

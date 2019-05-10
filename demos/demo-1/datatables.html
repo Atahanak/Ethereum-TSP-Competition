@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:58:32 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="admin template, angular admin template, bootstrap admin template, modern admin template, modern design admin template, dashboard template, responsive admin template, angular web app, crypto dashboard, bitcoin dashboard">
+    <title>Bootstrap &amp; Angular admin template + crypto dashboard - modern design admin | DataTables</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../../assets/vendors/feather-icons/feather.css" rel="stylesheet" />
+    <link href="../../assets/vendors/%40fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/vendors/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="../../assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" /><!-- PAGE LEVEL VENDORS-->
+    <link href="../../assets/vendors/DataTables/datatables.min.css" rel="stylesheet" /><!-- THEME STYLES-->
+    <link href="assets/css/app.min.css" rel="stylesheet" /><!-- PAGE LEVEL STYLES-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-wrapper">
+            <!-- BEGIN: Sidebar-->
+            <div class="page-sidebar custom-scroll" id="sidebar">
+                <div class="sidebar-header"><a class="sidebar-brand" href="index.html">Reidius</a><a class="sidebar-brand-mini" href="index.html">Rd</a><span class="sidebar-points"><span class="badge badge-success badge-point mr-2"></span><span class="badge badge-danger badge-point mr-2"></span><span class="badge badge-warning badge-point"></span></span></div>
+                <ul class="sidebar-menu metismenu">
+                    <li class="heading"><span>DASHBOARDS</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-home"></i><span class="nav-label">Dashboards</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="index.html">Dashboard v1</a></li>
+                            <li><a href="dashboard-2.html">Dashboard v2</a></li>
+                            <li><a href="dashboard-3.html">Dashboard v3</a></li>
+                            <li><a href="dashboard-ecommerce.html">eCommerce Analytics</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-trending-up"></i><span class="nav-label">Crypto</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="crypto-dashboard-1.html">Dashboard v1</a></li>
+                            <li><a href="crypto-dashboard-2.html">Dashboard v2</a></li>
+                            <li><a href="crypto-market.html">Market</a></li>
+                            <li><a href="crypto-buy-sell.html">Buy/Sell</a></li>
+                            <li><a href="crypto-wallet.html">Wallet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="mailbox.html"><i class="sidebar-item-icon ft-mail"></i><span class="nav-label">Mailbox</span></a></li>
+                    <li><a href="calendar.html"><i class="sidebar-item-icon ft-calendar"></i><span class="nav-label">Calendar</span></a></li>
+                    <li><a href="contacts.html"><i class="sidebar-item-icon ft-users"></i><span class="nav-label">Contacts</span></a></li>
+                    <li class="heading"><span>UI INTERFACE</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-anchor"></i><span class="nav-label">Basic UI</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="ui-colors.html">State Colors</a></li>
+                            <li><a href="ui-typography.html">Typography</a></li>
+                            <li><a href="ui-alerts.html">Alerts</a></li>
+                            <li><a href="ui-buttons.html">Buttons</a></li>
+                            <li><a href="ui-button-group.html">Button Group</a></li>
+                            <li><a href="javascript:;"><span class="nav-label">Tabs</span><i class="arrow la la-angle-right"></i></a><!-- 3-rd level-->
+                                <ul class="nav-3-level">
+                                    <li><a href="ui-tabs-line.html">Line tabs</a></li>
+                                    <li><a href="ui-pills.html">Pills</a></li>
+                                    <li><a href="ui-tabs-bootstrap.html">Bootstrap tabs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="ui-badges.html">Badges</a></li>
+                            <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                            <li><a href="ui-list-group.html">List Group</a></li>
+                            <li><a href="ui-media-list.html">Media list</a></li>
+                            <li><a href="ui-modal.html">Modal</a></li>
+                            <li><a href="ui-pagination.html">Pagination</a></li>
+                            <li><a href="ui-progress.html">Progress</a></li>
+                            <li><a href="ui-tooltips.html">Tooltips</a></li>
+                            <li><a href="ui-popovers.html">Popovers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-layers"></i><span class="nav-label">Cards</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="cards-basic.html">Basic Cards</a></li>
+                            <li><a href="card-actions.html">Card Actions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-package"></i><span class="nav-label">Extra Components</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="toastr-notifications.html">Toastr Notifications</a></li>
+                            <li><a href="sweetalert2.html">SweetAlert2</a></li>
+                            <li><a href="idle-timer.html">Idle timer</a></li>
+                            <li><a href="session-timeout.html">Session Timeout</a></li>
+                            <li><a href="tree-view.html">Tree View</a></li>
+                            <li><a href="masonry.html">Masonry</a></li>
+                            <li><a href="clipboard.html">Clipboard</a></li>
+                            <li><a href="nestable-list.html">Nestable list</a></li>
+                        </ul>
+                    </li>
+                    <li class="mm-active"><a href="javascript:;"><i class="sidebar-item-icon ft-grid"></i><span class="nav-label">Tables</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="table-basic.html">Basic Tables</a></li>
+                            <li><a class="mm-active" href="datatables.html">DataTables</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-map"></i><span class="nav-label">Maps</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="google-maps.html">Google maps</a></li>
+                            <li><a href="vector-maps.html">Vector maps</a></li>
+                            <li><a href="datamaps.html">Datamaps</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="icons.html"><i class="sidebar-item-icon ft-layers"></i><span class="nav-label">Icons</span></a></li>
+                    <li class="heading"><span>FORMS</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form Controls</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="form-line-inputs.html">Line Inputs</a></li>
+                            <li><a href="form-bootstrap-inputs.html">Bootstrap Inputs</a></li>
+                            <li><a href="form-switch.html">Switch</a></li>
+                            <li><a href="form-checkbox-radio.html">Checkbox &amp; Radio</a></li>
+                            <li><a href="form-input-groups.html">Input Groups</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form-layouts.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form Layouts</span></a></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form Widgets</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="summernote-editor.html">Summernote Editor</a></li>
+                            <li><a href="form-select2.html">Select2</a></li>
+                            <li><a href="form-bootstrap-select.html">Bootstrap Select</a></li>
+                            <li><a href="form-dual-listbox.html">Dual Listbox</a></li>
+                            <li><a href="form-multiselect.html">Multiselect</a></li>
+                            <li><a href="form-datepicker.html">Datepicker</a></li>
+                            <li><a href="form-datetimepicker.html">Datetimepicker</a></li>
+                            <li><a href="form-daterangepicker.html">Daterangepicker</a></li>
+                            <li><a href="form-timepicker.html">Timepicker</a></li>
+                            <li><a href="form-ion-range-slider.html">Ion Range Slider</a></li>
+                            <li><a href="form-tags-input.html">Tags Input</a></li>
+                            <li><a href="form-touchspin.html">Touchspin</a></li>
+                            <li><a href="form-maxlength.html">Maxlength</a></li>
+                            <li><a href="form-bootstrap-colorpicker.html">Bootstrap Colorpicker</a></li>
+                            <li><a href="form-jquery-minicolors.html">jQuery MiniColors</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="form-input-masks.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form input masks</span></a></li>
+                    <li><a href="form-validation.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form Validation</span></a></li>
+                    <li><a href="form-dropzone.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Dropzone File Upload</span></a></li>
+                    <li><a href="image-cropping.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Image Cropping</span></a></li>
+                    <li><a href="form-autocomplete.html"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Autocomplete</span></a></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-edit"></i><span class="nav-label">Form Wizard</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="form-wizard-circle.html">Circle Steps</a></li>
+                            <li><a href="form-wizard-pill.html">Pill Steps</a></li>
+                        </ul>
+                    </li>
+                    <li class="heading"><span>CHARTS</span></li>
+                    <li><a href="apexcharts.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">Apex Charts</span></a></li>
+                    <li><a href="chartjs.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">Chart.js</span></a></li>
+                    <li><a href="charts-flot.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">Flot Charts</span></a></li>
+                    <li><a href="charts-morris.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">Morris Charts</span></a></li>
+                    <li><a href="charts-c3.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">C3 Charts</span></a></li>
+                    <li><a href="charts-sparkline.html"><i class="sidebar-item-icon ft-bar-chart"></i><span class="nav-label">Sparkline Charts</span></a></li>
+                    <li class="heading"><span>PAGES &amp; APPS</span></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-lock"></i><span class="nav-label">Authentication</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="login-2.html">Login v2</a></li>
+                            <li><a href="login-3.html">Login v3</a></li>
+                            <li><a href="sign-up.html">Sign Up</a></li>
+                            <li><a href="forgot-password.html">Forgot password</a></li>
+                            <li><a href="lockscreen.html">Lockscreen</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-sliders"></i><span class="nav-label">Pricing Tables</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="pricing-table-1.html">Pricing Table v1</a></li>
+                            <li><a href="pricing-table-2.html">Pricing Table v2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-user"></i><span class="nav-label">Profiles</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="profile-1.html">Profile v1</a></li>
+                            <li><a href="profile-2.html">Profile v2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-help-circle"></i><span class="nav-label">FAQS</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="faq-1.html">FAQ v1</a></li>
+                            <li><a href="faq-2.html">FAQ v2</a></li>
+                            <li><a href="faq-3.html">FAQ v3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="knowledge-base.html"><i class="sidebar-item-icon ft-briefcase"></i><span class="nav-label">Knowledge Base</span></a></li>
+                    <li><a href="search.html"><i class="sidebar-item-icon ft-search"></i><span class="nav-label">Search Results</span></a></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-activity"></i><span class="nav-label">Timelines</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="timeline-lists.html">Timeline Lists</a></li>
+                            <li><a href="timeline-vertical.html">Timeline Vertical</a></li>
+                            <li><a href="timeline-horizontal.html">Timeline Horizontal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="invoice.html"><i class="sidebar-item-icon ft-file-text"></i><span class="nav-label">Invoice</span></a></li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-alert-triangle"></i><span class="nav-label">Errors</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="error-404.html">404 error</a></li>
+                            <li><a href="error-500.html">500 error</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="sidebar-item-icon ft-anchor"></i><span class="nav-label">Menu Levels</span><i class="arrow la la-angle-right"></i></a>
+                        <ul class="nav-2-level">
+                            <!-- 2-nd level-->
+                            <li><a href="javascript:;">Level 2</a></li>
+                            <li><a href="javascript:;"><span class="nav-label">Level 2</span><i class="arrow la la-angle-right"></i></a><!-- 3-rd level-->
+                                <ul class="nav-3-level">
+                                    <li><a href="javascript:;">Level 3</a></li>
+                                    <li><a href="javascript:;">Level 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- END: Sidebar-->
+            <!-- BEGIN: Content-->
+            <div class="content-area">
+                <!-- BEGIN: Header-->
+                <nav class="navbar navbar-expand navbar-light fixed-top header">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link navbar-icon sidebar-toggler" id="sidebar-toggler" href="#"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></li>
+                        <li class="nav-item dropdown d-none d-sm-inline-block"><a class="nav-link dropdown-toggle megamenu-link" href="#" data-toggle="dropdown"><span>Apps<i class="ti-angle-down arrow ml-2"></i></span></a>
+                            <div class="dropdown-menu nav-megamenu" style="min-width: 400px">
+                                <div class="row m-0">
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-activity item-badge mb-4"></i>
+                                            <h5 class="mb-2">Activity</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item bg-primary text-white" href="#"><i class="ft-globe item-badge mb-4 text-white"></i>
+                                            <h5 class="mb-2">Customers</h5>
+                                            <div class="text-white font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-layers item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Projects</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                    <div class="col-6"><a class="mega-menu-item" href="#"><i class="ft-shopping-cart item-badge mb-4"></i>
+                                            <h5 class="mb-2">My Orders</h5>
+                                            <div class="text-muted font-12">Lorem Ipsum dolar.</div></a></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link navbar-icon" href="javascript:;" data-toggle="modal" data-target="#search-modal"><i class="ft-search"></i></a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle navbar-icon" data-toggle="dropdown" href="#"><i class="ft-bell position-relative"></i><span class="notify-signal bg-primary"></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0" style="min-width: 350px">
+                                <div class="py-4 px-3 text-center text-white mb-3" style="background-color: #2c2f48;">
+                                    <h5 class="m-0">7 New Notifications</h5>
+                                </div>
+                                <div class="custom-scroll position-relative mb-3" style="height:320px;">
+                                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-shopping-cart text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">2 New Orders</h6>
+                                                        <div class="text-muted font-13">15 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-server text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">Server overloaded 91%</h6>
+                                                        <div class="text-muted font-13">40 min</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-support text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">New support request</h6>
+                                                        <div class="text-muted font-13">1 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-info-alt text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">System Warning</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-email text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">You have 2 new messages</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                                            <div class="media align-items-center"><i class="ti-user text-center font-20 text-primary mr-3" style="width: 40px"></i>
+                                                <div class="media-body">
+                                                    <div class="flexbox">
+                                                        <h6 class="mb-0 font-weight-bold">24 new users registered</h6>
+                                                        <div class="text-muted font-13">2 hrs</div>
+                                                    </div>
+                                                    <div class="font-13 text-muted">Lorem ipsum dolor sit amet ut.</div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                                <div class="px-3 py-2 text-center"><a class="hover-link font-13" href="javascript:;">view all</a></div>
+                            </div>
+                        </li>
+                        <li class="nav-divider"></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle no-arrow d-inline-flex align-items-center" data-toggle="dropdown" href="#"><span class="d-none d-sm-inline-block mr-2">John Due</span><span class="position-relative d-inline-block"><img class="rounded-circle" src="assets/img/users/admin-image.png" alt="image" width="36" /><span class="badge-point badge-success avatar-badge"></span></span></a>
+                            <div class="dropdown-menu dropdown-menu-right pt-0 pb-4" style="min-width: 280px;">
+                                <div class="p-4 mb-4 media align-items-center text-white" style="background-color: #2c2f48;"><img class="rounded-circle mr-3" src="assets/img/users/admin-image.png" alt="image" width="55" />
+                                    <div class="media-body">
+                                        <h5 class="mb-1">Jonathan Due</h5>
+                                        <div class="font-13">Administrator</div>
+                                    </div>
+                                </div><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-user mr-3 font-18 text-muted"></i>Profile</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-message-square mr-3 font-18 text-muted"></i>Messages</a><a class="dropdown-item d-flex align-items-center" href="#"><i class="ft-settings mr-3 font-18 text-muted"></i>Settings</a>
+                                <div class="dropdown-divider my-3"></div>
+                                <div class="mx-4"><a class="btn btn-link p-0" href="#"><span class="btn-icon"><i class="ft-power mr-2 font-18"></i>Logout</span></a></div>
+                            </div>
+                        </li>
+                        <li><a class="nav-link navbar-icon quick-sidebar-toggler" href="javascript:;"><span class="ti-align-right"></span></a></li>
+                    </ul>
+                </nav><!-- END: Header-->
+                <div class="page-content fade-in-up">
+                    <!-- BEGIN: Page heading-->
+                    <div class="page-heading">
+                        <div class="page-breadcrumb">
+                            <h1 class="page-title page-title-sep">DataTables</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="la la-home font-20"></i></a></li>
+                                <li class="breadcrumb-item">Tables</li>
+                                <li class="breadcrumb-item">DataTables</li>
+                            </ol>
+                        </div>
+                    </div><!-- BEGIN: Page content-->
+                    <div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Zero Configuration</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-base">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td>$86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td>$433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>33</td>
+                                                <td>2008/11/28</td>
+                                                <td>$162,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2012/12/02</td>
+                                                <td>$372,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod Chandler</td>
+                                                <td>Sales Assistant</td>
+                                                <td>San Francisco</td>
+                                                <td>59</td>
+                                                <td>2012/08/06</td>
+                                                <td>$137,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona Davidson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Tokyo</td>
+                                                <td>55</td>
+                                                <td>2010/10/14</td>
+                                                <td>$327,900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Colleen Hurst</td>
+                                                <td>Javascript Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>39</td>
+                                                <td>2009/09/15</td>
+                                                <td>$205,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sonya Frost</td>
+                                                <td>Software Engineer</td>
+                                                <td>Edinburgh</td>
+                                                <td>23</td>
+                                                <td>2008/12/13</td>
+                                                <td>$103,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jena Gaines</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>30</td>
+                                                <td>2008/12/19</td>
+                                                <td>$90,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quinn Flynn</td>
+                                                <td>Support Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2013/03/03</td>
+                                                <td>$342,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Charde Marshall</td>
+                                                <td>Regional Director</td>
+                                                <td>San Francisco</td>
+                                                <td>36</td>
+                                                <td>2008/10/16</td>
+                                                <td>$470,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Haley Kennedy</td>
+                                                <td>Senior Marketing Designer</td>
+                                                <td>London</td>
+                                                <td>43</td>
+                                                <td>2012/12/18</td>
+                                                <td>$313,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tatyana Fitzpatrick</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>19</td>
+                                                <td>2010/03/17</td>
+                                                <td>$385,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael Silva</td>
+                                                <td>Marketing Designer</td>
+                                                <td>London</td>
+                                                <td>66</td>
+                                                <td>2012/11/27</td>
+                                                <td>$198,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Paul Byrd</td>
+                                                <td>Chief Financial Officer (CFO)</td>
+                                                <td>New York</td>
+                                                <td>64</td>
+                                                <td>2010/06/09</td>
+                                                <td>$725,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gloria Little</td>
+                                                <td>Systems Administrator</td>
+                                                <td>New York</td>
+                                                <td>59</td>
+                                                <td>2009/04/10</td>
+                                                <td>$237,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bradley Greer</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>41</td>
+                                                <td>2012/10/13</td>
+                                                <td>$132,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dai Rios</td>
+                                                <td>Personnel Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>35</td>
+                                                <td>2012/09/26</td>
+                                                <td>$217,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jenette Caldwell</td>
+                                                <td>Development Lead</td>
+                                                <td>New York</td>
+                                                <td>30</td>
+                                                <td>2011/09/03</td>
+                                                <td>$345,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Yuri Berry</td>
+                                                <td>Chief Marketing Officer (CMO)</td>
+                                                <td>New York</td>
+                                                <td>40</td>
+                                                <td>2009/06/25</td>
+                                                <td>$675,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caesar Vance</td>
+                                                <td>Pre-Sales Support</td>
+                                                <td>New York</td>
+                                                <td>21</td>
+                                                <td>2011/12/12</td>
+                                                <td>$106,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Doris Wilder</td>
+                                                <td>Sales Assistant</td>
+                                                <td>Sidney</td>
+                                                <td>23</td>
+                                                <td>2010/09/20</td>
+                                                <td>$85,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Angelica Ramos</td>
+                                                <td>Chief Executive Officer (CEO)</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2009/10/09</td>
+                                                <td>$1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gavin Joyce</td>
+                                                <td>Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>42</td>
+                                                <td>2010/12/22</td>
+                                                <td>$92,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer Chang</td>
+                                                <td>Regional Director</td>
+                                                <td>Singapore</td>
+                                                <td>28</td>
+                                                <td>2010/11/14</td>
+                                                <td>$357,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brenden Wagner</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>28</td>
+                                                <td>2011/06/07</td>
+                                                <td>$206,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fiona Green</td>
+                                                <td>Chief Operating Officer (COO)</td>
+                                                <td>San Francisco</td>
+                                                <td>48</td>
+                                                <td>2010/03/11</td>
+                                                <td>$850,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shou Itou</td>
+                                                <td>Regional Marketing</td>
+                                                <td>Tokyo</td>
+                                                <td>20</td>
+                                                <td>2011/08/14</td>
+                                                <td>$163,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michelle House</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Sidney</td>
+                                                <td>37</td>
+                                                <td>2011/06/02</td>
+                                                <td>$95,400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Suki Burks</td>
+                                                <td>Developer</td>
+                                                <td>London</td>
+                                                <td>53</td>
+                                                <td>2009/10/22</td>
+                                                <td>$114,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Prescott Bartlett</td>
+                                                <td>Technical Author</td>
+                                                <td>London</td>
+                                                <td>27</td>
+                                                <td>2011/05/07</td>
+                                                <td>$145,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gavin Cortez</td>
+                                                <td>Team Leader</td>
+                                                <td>San Francisco</td>
+                                                <td>22</td>
+                                                <td>2008/10/26</td>
+                                                <td>$235,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Martena Mccray</td>
+                                                <td>Post-Sales support</td>
+                                                <td>Edinburgh</td>
+                                                <td>46</td>
+                                                <td>2011/03/09</td>
+                                                <td>$324,050</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Unity Butler</td>
+                                                <td>Marketing Designer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>2009/12/09</td>
+                                                <td>$85,675</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Howard Hatfield</td>
+                                                <td>Office Manager</td>
+                                                <td>San Francisco</td>
+                                                <td>51</td>
+                                                <td>2008/12/16</td>
+                                                <td>$164,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vivian Harrell</td>
+                                                <td>Financial Controller</td>
+                                                <td>San Francisco</td>
+                                                <td>62</td>
+                                                <td>2009/02/14</td>
+                                                <td>$452,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Timothy Mooney</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>37</td>
+                                                <td>2008/12/11</td>
+                                                <td>$136,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jackson Bradshaw</td>
+                                                <td>Director</td>
+                                                <td>New York</td>
+                                                <td>65</td>
+                                                <td>2008/09/26</td>
+                                                <td>$645,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Olivia Liang</td>
+                                                <td>Support Engineer</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2011/02/03</td>
+                                                <td>$234,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bruno Nash</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>38</td>
+                                                <td>2011/05/03</td>
+                                                <td>$163,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sakura Yamamoto</td>
+                                                <td>Support Engineer</td>
+                                                <td>Tokyo</td>
+                                                <td>37</td>
+                                                <td>2009/08/19</td>
+                                                <td>$139,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thor Walton</td>
+                                                <td>Developer</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2013/08/11</td>
+                                                <td>$98,540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Finn Camacho</td>
+                                                <td>Support Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>2009/07/07</td>
+                                                <td>$87,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serge Baldwin</td>
+                                                <td>Data Coordinator</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2012/04/09</td>
+                                                <td>$138,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zenaida Frank</td>
+                                                <td>Software Engineer</td>
+                                                <td>New York</td>
+                                                <td>63</td>
+                                                <td>2010/01/04</td>
+                                                <td>$125,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zorita Serrano</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>56</td>
+                                                <td>2012/06/01</td>
+                                                <td>$115,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer Acosta</td>
+                                                <td>Junior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>43</td>
+                                                <td>2013/02/01</td>
+                                                <td>$75,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cara Stevens</td>
+                                                <td>Sales Assistant</td>
+                                                <td>New York</td>
+                                                <td>46</td>
+                                                <td>2011/12/06</td>
+                                                <td>$145,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lael Greer</td>
+                                                <td>Systems Administrator</td>
+                                                <td>London</td>
+                                                <td>21</td>
+                                                <td>2009/02/27</td>
+                                                <td>$103,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jonas Alexander</td>
+                                                <td>Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>30</td>
+                                                <td>2010/07/14</td>
+                                                <td>$86,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shad Decker</td>
+                                                <td>Regional Director</td>
+                                                <td>Edinburgh</td>
+                                                <td>51</td>
+                                                <td>2008/11/13</td>
+                                                <td>$183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael Bruce</td>
+                                                <td>Javascript Developer</td>
+                                                <td>Singapore</td>
+                                                <td>29</td>
+                                                <td>2011/06/27</td>
+                                                <td>$183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Donna Snider</td>
+                                                <td>Customer Support</td>
+                                                <td>New York</td>
+                                                <td>27</td>
+                                                <td>2011/01/25</td>
+                                                <td>$112,000</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Responsive</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-responsive">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Scroll - vertical</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-scroll-vertical">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Scroll - horizontal</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100 nowrap" id="dt-scroll-horizonal" style="width:100%">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                                <th>Extn.</th>
+                                                <th>E-mail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>5421</td>
+                                                <td>t.nixon@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett</td>
+                                                <td>Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                                <td>8422</td>
+                                                <td>g.winters@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton</td>
+                                                <td>Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td>$86,000</td>
+                                                <td>1562</td>
+                                                <td>a.cox@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric</td>
+                                                <td>Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td>$433,060</td>
+                                                <td>6224</td>
+                                                <td>c.kelly@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi</td>
+                                                <td>Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>33</td>
+                                                <td>2008/11/28</td>
+                                                <td>$162,700</td>
+                                                <td>5407</td>
+                                                <td>a.satou@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle</td>
+                                                <td>Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2012/12/02</td>
+                                                <td>$372,000</td>
+                                                <td>4804</td>
+                                                <td>b.williamson@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod</td>
+                                                <td>Chandler</td>
+                                                <td>Sales Assistant</td>
+                                                <td>San Francisco</td>
+                                                <td>59</td>
+                                                <td>2012/08/06</td>
+                                                <td>$137,500</td>
+                                                <td>9608</td>
+                                                <td>h.chandler@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona</td>
+                                                <td>Davidson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Tokyo</td>
+                                                <td>55</td>
+                                                <td>2010/10/14</td>
+                                                <td>$327,900</td>
+                                                <td>6200</td>
+                                                <td>r.davidson@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Colleen</td>
+                                                <td>Hurst</td>
+                                                <td>Javascript Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>39</td>
+                                                <td>2009/09/15</td>
+                                                <td>$205,500</td>
+                                                <td>2360</td>
+                                                <td>c.hurst@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sonya</td>
+                                                <td>Frost</td>
+                                                <td>Software Engineer</td>
+                                                <td>Edinburgh</td>
+                                                <td>23</td>
+                                                <td>2008/12/13</td>
+                                                <td>$103,600</td>
+                                                <td>1667</td>
+                                                <td>s.frost@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jena</td>
+                                                <td>Gaines</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>30</td>
+                                                <td>2008/12/19</td>
+                                                <td>$90,560</td>
+                                                <td>3814</td>
+                                                <td>j.gaines@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quinn</td>
+                                                <td>Flynn</td>
+                                                <td>Support Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2013/03/03</td>
+                                                <td>$342,000</td>
+                                                <td>9497</td>
+                                                <td>q.flynn@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Charde</td>
+                                                <td>Marshall</td>
+                                                <td>Regional Director</td>
+                                                <td>San Francisco</td>
+                                                <td>36</td>
+                                                <td>2008/10/16</td>
+                                                <td>$470,600</td>
+                                                <td>6741</td>
+                                                <td>c.marshall@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Haley</td>
+                                                <td>Kennedy</td>
+                                                <td>Senior Marketing Designer</td>
+                                                <td>London</td>
+                                                <td>43</td>
+                                                <td>2012/12/18</td>
+                                                <td>$313,500</td>
+                                                <td>3597</td>
+                                                <td>h.kennedy@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tatyana</td>
+                                                <td>Fitzpatrick</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>19</td>
+                                                <td>2010/03/17</td>
+                                                <td>$385,750</td>
+                                                <td>1965</td>
+                                                <td>t.fitzpatrick@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael</td>
+                                                <td>Silva</td>
+                                                <td>Marketing Designer</td>
+                                                <td>London</td>
+                                                <td>66</td>
+                                                <td>2012/11/27</td>
+                                                <td>$198,500</td>
+                                                <td>1581</td>
+                                                <td>m.silva@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Paul</td>
+                                                <td>Byrd</td>
+                                                <td>Chief Financial Officer (CFO)</td>
+                                                <td>New York</td>
+                                                <td>64</td>
+                                                <td>2010/06/09</td>
+                                                <td>$725,000</td>
+                                                <td>3059</td>
+                                                <td>p.byrd@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gloria</td>
+                                                <td>Little</td>
+                                                <td>Systems Administrator</td>
+                                                <td>New York</td>
+                                                <td>59</td>
+                                                <td>2009/04/10</td>
+                                                <td>$237,500</td>
+                                                <td>1721</td>
+                                                <td>g.little@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bradley</td>
+                                                <td>Greer</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>41</td>
+                                                <td>2012/10/13</td>
+                                                <td>$132,000</td>
+                                                <td>2558</td>
+                                                <td>b.greer@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dai</td>
+                                                <td>Rios</td>
+                                                <td>Personnel Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>35</td>
+                                                <td>2012/09/26</td>
+                                                <td>$217,500</td>
+                                                <td>2290</td>
+                                                <td>d.rios@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jenette</td>
+                                                <td>Caldwell</td>
+                                                <td>Development Lead</td>
+                                                <td>New York</td>
+                                                <td>30</td>
+                                                <td>2011/09/03</td>
+                                                <td>$345,000</td>
+                                                <td>1937</td>
+                                                <td>j.caldwell@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Yuri</td>
+                                                <td>Berry</td>
+                                                <td>Chief Marketing Officer (CMO)</td>
+                                                <td>New York</td>
+                                                <td>40</td>
+                                                <td>2009/06/25</td>
+                                                <td>$675,000</td>
+                                                <td>6154</td>
+                                                <td>y.berry@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Caesar</td>
+                                                <td>Vance</td>
+                                                <td>Pre-Sales Support</td>
+                                                <td>New York</td>
+                                                <td>21</td>
+                                                <td>2011/12/12</td>
+                                                <td>$106,450</td>
+                                                <td>8330</td>
+                                                <td>c.vance@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Doris</td>
+                                                <td>Wilder</td>
+                                                <td>Sales Assistant</td>
+                                                <td>Sidney</td>
+                                                <td>23</td>
+                                                <td>2010/09/20</td>
+                                                <td>$85,600</td>
+                                                <td>3023</td>
+                                                <td>d.wilder@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Angelica</td>
+                                                <td>Ramos</td>
+                                                <td>Chief Executive Officer (CEO)</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2009/10/09</td>
+                                                <td>$1,200,000</td>
+                                                <td>5797</td>
+                                                <td>a.ramos@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gavin</td>
+                                                <td>Joyce</td>
+                                                <td>Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>42</td>
+                                                <td>2010/12/22</td>
+                                                <td>$92,575</td>
+                                                <td>8822</td>
+                                                <td>g.joyce@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer</td>
+                                                <td>Chang</td>
+                                                <td>Regional Director</td>
+                                                <td>Singapore</td>
+                                                <td>28</td>
+                                                <td>2010/11/14</td>
+                                                <td>$357,650</td>
+                                                <td>9239</td>
+                                                <td>j.chang@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brenden</td>
+                                                <td>Wagner</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>28</td>
+                                                <td>2011/06/07</td>
+                                                <td>$206,850</td>
+                                                <td>1314</td>
+                                                <td>b.wagner@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fiona</td>
+                                                <td>Green</td>
+                                                <td>Chief Operating Officer (COO)</td>
+                                                <td>San Francisco</td>
+                                                <td>48</td>
+                                                <td>2010/03/11</td>
+                                                <td>$850,000</td>
+                                                <td>2947</td>
+                                                <td>f.green@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shou</td>
+                                                <td>Itou</td>
+                                                <td>Regional Marketing</td>
+                                                <td>Tokyo</td>
+                                                <td>20</td>
+                                                <td>2011/08/14</td>
+                                                <td>$163,000</td>
+                                                <td>8899</td>
+                                                <td>s.itou@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michelle</td>
+                                                <td>House</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Sidney</td>
+                                                <td>37</td>
+                                                <td>2011/06/02</td>
+                                                <td>$95,400</td>
+                                                <td>2769</td>
+                                                <td>m.house@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Suki</td>
+                                                <td>Burks</td>
+                                                <td>Developer</td>
+                                                <td>London</td>
+                                                <td>53</td>
+                                                <td>2009/10/22</td>
+                                                <td>$114,500</td>
+                                                <td>6832</td>
+                                                <td>s.burks@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Prescott</td>
+                                                <td>Bartlett</td>
+                                                <td>Technical Author</td>
+                                                <td>London</td>
+                                                <td>27</td>
+                                                <td>2011/05/07</td>
+                                                <td>$145,000</td>
+                                                <td>3606</td>
+                                                <td>p.bartlett@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gavin</td>
+                                                <td>Cortez</td>
+                                                <td>Team Leader</td>
+                                                <td>San Francisco</td>
+                                                <td>22</td>
+                                                <td>2008/10/26</td>
+                                                <td>$235,500</td>
+                                                <td>2860</td>
+                                                <td>g.cortez@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Martena</td>
+                                                <td>Mccray</td>
+                                                <td>Post-Sales support</td>
+                                                <td>Edinburgh</td>
+                                                <td>46</td>
+                                                <td>2011/03/09</td>
+                                                <td>$324,050</td>
+                                                <td>8240</td>
+                                                <td>m.mccray@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Unity</td>
+                                                <td>Butler</td>
+                                                <td>Marketing Designer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>2009/12/09</td>
+                                                <td>$85,675</td>
+                                                <td>5384</td>
+                                                <td>u.butler@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Howard</td>
+                                                <td>Hatfield</td>
+                                                <td>Office Manager</td>
+                                                <td>San Francisco</td>
+                                                <td>51</td>
+                                                <td>2008/12/16</td>
+                                                <td>$164,500</td>
+                                                <td>7031</td>
+                                                <td>h.hatfield@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hope</td>
+                                                <td>Fuentes</td>
+                                                <td>Secretary</td>
+                                                <td>San Francisco</td>
+                                                <td>41</td>
+                                                <td>2010/02/12</td>
+                                                <td>$109,850</td>
+                                                <td>6318</td>
+                                                <td>h.fuentes@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vivian</td>
+                                                <td>Harrell</td>
+                                                <td>Financial Controller</td>
+                                                <td>San Francisco</td>
+                                                <td>62</td>
+                                                <td>2009/02/14</td>
+                                                <td>$452,500</td>
+                                                <td>9422</td>
+                                                <td>v.harrell@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Timothy</td>
+                                                <td>Mooney</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>37</td>
+                                                <td>2008/12/11</td>
+                                                <td>$136,200</td>
+                                                <td>7580</td>
+                                                <td>t.mooney@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jackson</td>
+                                                <td>Bradshaw</td>
+                                                <td>Director</td>
+                                                <td>New York</td>
+                                                <td>65</td>
+                                                <td>2008/09/26</td>
+                                                <td>$645,750</td>
+                                                <td>1042</td>
+                                                <td>j.bradshaw@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Olivia</td>
+                                                <td>Liang</td>
+                                                <td>Support Engineer</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2011/02/03</td>
+                                                <td>$234,500</td>
+                                                <td>2120</td>
+                                                <td>o.liang@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bruno</td>
+                                                <td>Nash</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>38</td>
+                                                <td>2011/05/03</td>
+                                                <td>$163,500</td>
+                                                <td>6222</td>
+                                                <td>b.nash@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sakura</td>
+                                                <td>Yamamoto</td>
+                                                <td>Support Engineer</td>
+                                                <td>Tokyo</td>
+                                                <td>37</td>
+                                                <td>2009/08/19</td>
+                                                <td>$139,575</td>
+                                                <td>9383</td>
+                                                <td>s.yamamoto@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thor</td>
+                                                <td>Walton</td>
+                                                <td>Developer</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2013/08/11</td>
+                                                <td>$98,540</td>
+                                                <td>8327</td>
+                                                <td>t.walton@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Finn</td>
+                                                <td>Camacho</td>
+                                                <td>Support Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>2009/07/07</td>
+                                                <td>$87,500</td>
+                                                <td>2927</td>
+                                                <td>f.camacho@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serge</td>
+                                                <td>Baldwin</td>
+                                                <td>Data Coordinator</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2012/04/09</td>
+                                                <td>$138,575</td>
+                                                <td>8352</td>
+                                                <td>s.baldwin@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zenaida</td>
+                                                <td>Frank</td>
+                                                <td>Software Engineer</td>
+                                                <td>New York</td>
+                                                <td>63</td>
+                                                <td>2010/01/04</td>
+                                                <td>$125,250</td>
+                                                <td>7439</td>
+                                                <td>z.frank@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zorita</td>
+                                                <td>Serrano</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>56</td>
+                                                <td>2012/06/01</td>
+                                                <td>$115,000</td>
+                                                <td>4389</td>
+                                                <td>z.serrano@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer</td>
+                                                <td>Acosta</td>
+                                                <td>Junior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>43</td>
+                                                <td>2013/02/01</td>
+                                                <td>$75,650</td>
+                                                <td>3431</td>
+                                                <td>j.acosta@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cara</td>
+                                                <td>Stevens</td>
+                                                <td>Sales Assistant</td>
+                                                <td>New York</td>
+                                                <td>46</td>
+                                                <td>2011/12/06</td>
+                                                <td>$145,600</td>
+                                                <td>3990</td>
+                                                <td>c.stevens@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione</td>
+                                                <td>Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011/03/21</td>
+                                                <td>$356,250</td>
+                                                <td>1016</td>
+                                                <td>h.butler@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lael</td>
+                                                <td>Greer</td>
+                                                <td>Systems Administrator</td>
+                                                <td>London</td>
+                                                <td>21</td>
+                                                <td>2009/02/27</td>
+                                                <td>$103,500</td>
+                                                <td>6733</td>
+                                                <td>l.greer@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jonas</td>
+                                                <td>Alexander</td>
+                                                <td>Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>30</td>
+                                                <td>2010/07/14</td>
+                                                <td>$86,500</td>
+                                                <td>8196</td>
+                                                <td>j.alexander@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shad</td>
+                                                <td>Decker</td>
+                                                <td>Regional Director</td>
+                                                <td>Edinburgh</td>
+                                                <td>51</td>
+                                                <td>2008/11/13</td>
+                                                <td>$183,000</td>
+                                                <td>6373</td>
+                                                <td>s.decker@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael</td>
+                                                <td>Bruce</td>
+                                                <td>Javascript Developer</td>
+                                                <td>Singapore</td>
+                                                <td>29</td>
+                                                <td>2011/06/27</td>
+                                                <td>$183,000</td>
+                                                <td>5384</td>
+                                                <td>m.bruce@datatables.net</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Donna</td>
+                                                <td>Snider</td>
+                                                <td>Customer Support</td>
+                                                <td>New York</td>
+                                                <td>27</td>
+                                                <td>2011/01/25</td>
+                                                <td>$112,000</td>
+                                                <td>4226</td>
+                                                <td>d.snider@datatables.net</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Ajax sourced data</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-ajax-data">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Buttons actions</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-buttons">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Extn.</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="box-title">Filter & custom search field</h5>
+                                <div class="flexbox mb-4">
+                                    <div class="flexbox"><label class="mb-0 mr-2">Type:</label><select class="selectpicker form-control show-tick" id="type-filter" title="Please select" data-width="150px">
+                                            <option value="">All</option>
+                                            <option>Shipped</option>
+                                            <option>Completed</option>
+                                            <option>Pending</option>
+                                            <option>Canceled</option>
+                                        </select></div>
+                                    <div class="input-group-icon input-group-icon-right mr-3"><span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span><input class="form-control form-control-rounded" id="key-search" type="text" placeholder="Search ..."></div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered w-100" id="dt-filter">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Order ID</th>
+                                                <th>Customer</th>
+                                                <th>Total Price</th>
+                                                <th>Status</th>
+                                                <th>Payment</th>
+                                                <th>Date</th>
+                                                <th class="no-sort"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><a href="javascript:;">#1254</a></td>
+                                                <td>Becky Brooks</td>
+                                                <td>$457</td>
+                                                <td><span class="badge badge-success badge-pill">Shipped</span></td>
+                                                <td>Paid</td>
+                                                <td>17.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><a href="javascript:;">#1253</a></td>
+                                                <td>Emma Johnson</td>
+                                                <td>$1200</td>
+                                                <td><span class="badge badge-success badge-pill">Shipped</span></td>
+                                                <td>Paid</td>
+                                                <td>17.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><a href="javascript:;">#1252</a></td>
+                                                <td>Noah Williams</td>
+                                                <td>$780</td>
+                                                <td><span class="badge badge-primary badge-pill">Pending</span></td>
+                                                <td>Paid</td>
+                                                <td>16.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><a href="javascript:;">#1251</a></td>
+                                                <td>Sophia Jones</td>
+                                                <td>$105</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>15.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td><a href="javascript:;">#1250</a></td>
+                                                <td>Jacob Brown</td>
+                                                <td>$40</td>
+                                                <td><span class="badge badge-primary badge-pill">Pending</span></td>
+                                                <td>_</td>
+                                                <td>12.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td><a href="javascript:;">#1249</a></td>
+                                                <td>James Davis</td>
+                                                <td>$78</td>
+                                                <td><span class="badge badge-success badge-pill">Shipped</span></td>
+                                                <td>Paid</td>
+                                                <td>12.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td><a href="javascript:;">#1248</a></td>
+                                                <td>Ava Wilson</td>
+                                                <td>$1450</td>
+                                                <td><span class="badge badge-danger badge-pill">Canceled</span></td>
+                                                <td>_</td>
+                                                <td>11.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td><a href="javascript:;">#1247</a></td>
+                                                <td>Ethan Taylor</td>
+                                                <td>$390</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>10.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td><a href="javascript:;">#1246</a></td>
+                                                <td>Emily Thomas</td>
+                                                <td>$850</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>10.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td><a href="javascript:;">#1245</a></td>
+                                                <td>Noah Moore</td>
+                                                <td>$220</td>
+                                                <td><span class="badge badge-danger badge-pill">Canceled</span></td>
+                                                <td>_</td>
+                                                <td>09.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td><a href="javascript:;">#1244</a></td>
+                                                <td>Mia Anderson</td>
+                                                <td>$90</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>08.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td><a href="javascript:;">#1243</a></td>
+                                                <td>Amelia Harris</td>
+                                                <td>$670</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>08.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td><a href="javascript:;">#1242</a></td>
+                                                <td>Sofia Jackson</td>
+                                                <td>$1120</td>
+                                                <td><span class="badge badge-success badge-pill">Completed</span></td>
+                                                <td>Paid</td>
+                                                <td>07.05.2018</td>
+                                                <td><a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p>There are a lot of options and examples. See in the official website.</p><a class="btn btn-primary" href="https://datatables.net/" target="_blank">See all options and examples</a>
+                        </div>
+                    </div><!-- END: Page content-->
+                </div><!-- BEGIN: Footer-->
+                <footer class="page-footer flexbox">
+                    <div class="text-muted">2019 © <strong>Vaapthemes</strong>. All rights reserved</div><a class="btn btn-primary btn-rounded" href="https://vaapthemes.com/themes/reidius/" target="_blank">Buy Now</a>
+                </footer><!-- END: Footer-->
+            </div><!-- END: Content-->
+        </div>
+    </div><!-- BEGIN: Search form-->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document" style="margin-top: 100px">
+            <div class="modal-content">
+                <form class="search-top-bar" action="#"><input class="form-control search-input" type="text" placeholder="Search..."><button class="reset input-search-icon" type="submit"><i class="ft-search"></i></button><button class="reset input-search-close" type="button" data-dismiss="modal"><i class="ft-x"></i></button></form>
+            </div>
+        </div>
+    </div><!-- END: Search form-->
+    <!-- BEGIN: Quick sidebar-->
+    <div class="quick-sidebar" id="quick-sidebar"><button class="close quick-sidebar-close js-close-backdrop"><span aria-hidden="true">×</span></button>
+        <div class="px-4 quick-sidebar-header">
+            <ul class="nav nav-pills nav-pills-solid nav-justified w-100 mr-4">
+                <li class="nav-item mr-2"><a class="nav-link active" data-toggle="pill" href="#sidenav-tab-messages">Messages</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-settings">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#sidenav-tab-log">Logs</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane active h-100" id="sidenav-tab-messages">
+                <div class="position-relative custom-scroll h-100">
+                    <div class="flexbox px-4 mb-4 mt-3"><span class="text-muted">23 Messages</span><a href="mailbox.html">View All</a></div>
+                    <div class="list-group list-group-flush"><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u1.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u2.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u3.jpg" alt="image" width="40" /><span class="badge-point badge-success avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u5.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u8.jpg" alt="image" width="40" /><span class="badge-point badge-success avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u4.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u9.jpg" alt="image" width="40" /><span class="badge-point badge-success avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a><a class="list-group-item list-group-item-action px-4 py-3" href="#">
+                            <div class="media">
+                                <div class="mr-3 position-relative"><img class="rounded-circle" src="assets/img/users/u6.jpg" alt="image" width="40" /><span class="badge-point badge-warning avatar-badge"></span></div>
+                                <div class="media-body">
+                                    <div class="flexbox mb-2">
+                                        <h6 class="mb-0">John Due</h6>
+                                        <div class="text-muted font-13">2 days ago</div>
+                                    </div>
+                                    <div class="font-13">Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor sed.</div>
+                                </div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-settings">
+                <div class="position-relative custom-scroll h-100">
+                    <h5 class="mb-4">App Settings</h5>
+                    <div class="flexbox py-3">Enable notifications:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">SMS notifications:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Chat history:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Show recent activity:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">Users log:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Site Tracking:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <h5 class="mb-4 mt-5">Orders Settings</h5>
+                    <div class="flexbox py-3">Orders history:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">Notify on new orders:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Sales reports:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                    <div class="flexbox py-3">Orders reports:<label class="ui-switch switch-solid"><input type="checkbox" checked=""><span></span></label></div>
+                    <div class="flexbox py-3">Order auto status:<label class="ui-switch switch-solid"><input type="checkbox"><span></span></label></div>
+                </div>
+            </div>
+            <div class="tab-pane h-100 p-4" id="sidenav-tab-log">
+                <div class="position-relative custom-scroll h-100">
+                    <ul class="timeline timeline-default outline-points">
+                        <li class="timeline-item">2 Issue fixed<span class="font-13 text-muted ml-2">Just now</span></li>
+                        <li class="timeline-item"><span>15 New orders<span class="badge badge-primary badge-pill ml-2">important</span></span><span class="font-13 text-muted ml-2">5 mins</span></li>
+                        <li class="timeline-item">18 new orders sent<span class="font-13 text-muted ml-2">24 mins</span></li>
+                        <li class="timeline-item">15 New messages<span class="font-13 text-muted ml-2">45 mins</span></li>
+                        <li class="timeline-item">The invoice is ready<span class="font-13 text-muted ml-2">1 hrs</span></li>
+                        <li class="timeline-item"><span>Server Error<span class="badge badge-success badge-pill ml-2">resolved</span></span><span class="font-13 text-muted ml-2">2 hrs</span></li>
+                        <li class="timeline-item"><span>System Warning<a class="text-purple ml-2">Check</a></span><span class="font-13 text-muted ml-2">12:07</span></li>
+                        <li class="timeline-item">24 new users registered<span class="font-13 text-muted ml-2">12:30</span></li>
+                        <li class="timeline-item"><span>5 New Orders<span class="badge badge-warning badge-pill ml-2">important</span></span><span class="font-13 text-muted ml-2">13:45</span></li>
+                        <li class="timeline-item"><span class="flexbox">Production server up<i class="la la-arrow-circle-up font-18 ml-2 text-success"></i></span><span class="font-13 text-muted ml-2">1 days ago</span></li>
+                        <li class="timeline-item">Server overloaded 91%<span class="font-13 text-muted ml-2">2 days ago</span></li>
+                        <li class="timeline-item">Server error<span class="font-13 text-muted ml-2">2 days ago</span></li>
+                        <li class="timeline-item">2 Issue fixed<span class="font-13 text-muted ml-2">Just now</span></li>
+                        <li class="timeline-item"><span>15 New orders<span class="badge badge-primary badge-pill ml-2">important</span></span><span class="font-13 text-muted ml-2">5 mins</span></li>
+                        <li class="timeline-item">18 new orders sent<span class="font-13 text-muted ml-2">24 mins</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- END: Quick sidebar-->
+    <!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script><!-- PAGE LEVEL PLUGINS-->
+    <script src="../../assets/vendors/DataTables/datatables.min.js"></script><!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            // Basic example
+            $('#dt-base').DataTable();
+            // Responsive
+            $('#dt-responsive').DataTable({
+                responsive: true,
+                ajax: './assets/demo/data/datatable-data.json',
+            });
+            // Scroll - vertical example
+            $('#dt-scroll-vertical').DataTable({
+                scrollY: "250px",
+                scrollCollapse: true,
+                paging: false,
+                ajax: './assets/demo/data/datatable-data.json',
+            });
+            // Scroll - horizontal
+            $('#dt-scroll-horizonal').DataTable({
+                scrollX: true
+            });
+            // Ajax sourced data
+            $('#dt-ajax-data').DataTable({
+                ajax: './assets/demo/data/datatable-data.json',
+                responsive: true,
+            });
+            // Buttons example
+            $('#dt-buttons').DataTable({
+                ajax: './assets/demo/data/datatable-data.json',
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'pdf', 'csv', 'print'
+                ]
+            });
+            // Filter & custom search field
+            $(function() {
+                var table = $('#dt-filter').DataTable({
+                    responsive: true,
+                    "sDom": 'rtip',
+                    columnDefs: [{
+                        targets: 'no-sort',
+                        orderable: false
+                    }]
+                });
+                $('#key-search').on('keyup', function() {
+                    table.search(this.value).draw();
+                });
+                $('#type-filter').on('change', function() {
+                    table.column(4).search($(this).val()).draw();
+                });
+            });
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:58:32 GMT -->
+</html>

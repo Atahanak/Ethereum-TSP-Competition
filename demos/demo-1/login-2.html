@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/login-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:59:03 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="admin template, angular admin template, bootstrap admin template, modern admin template, modern design admin template, dashboard template, responsive admin template, angular web app, crypto dashboard, bitcoin dashboard">
+    <title>Bootstrap &amp; Angular admin template + crypto dashboard - modern design admin | Login</title><!-- GLOBAL VENDORS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../../assets/vendors/%40fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/vendors/themify-icons/themify-icons.css" rel="stylesheet" />
+    <link href="../../assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" /><!-- PAGE LEVEL VENDORS-->
+    <!-- THEME STYLES-->
+    <link href="assets/css/app.min.css" rel="stylesheet" /><!-- PAGE LEVEL STYLES-->
+    <style>body {
+	background-color: #eff4ff;
+}
+.auth-wrapper {
+		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 50px 15px 30px 15px;
+}
+.auth-content {
+		max-width: 900px;
+		flex-basis: 900px;
+		box-shadow: 0 1px 15px 1px rgba(62, 57, 107, .07);
+}
+.home-link {
+		position: absolute;
+		left: 5px;
+		top: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="auth-wrapper">
+            <div class="row auth-content mx-0">
+                <div class="col-md-6 bg-white p-5">
+                    <div>
+                        <div class="text-center mb-5">
+                            <h4 class="mb-3">Login to Your accaunt</h4>
+                            <div class="text-muted">Still no account?<a class="ml-2" href="sign-up.html" style="border-bottom: 1px solid">Create account</a></div>
+                        </div>
+                        <form id="login-form" action="javascript:;">
+                            <div class="form-group mb-4"><input class="form-control" type="email" name="email" placeholder="Enter email"></div>
+                            <div class="form-group mb-4"><input class="form-control" type="password" name="password" placeholder="Enter Password"></div>
+                            <div class="flexbox my-5"><label class="checkbox checkbox-primary"><input type="checkbox" checked=""><span>Remember Me</span></label><a href="forgot-password.html">Forgot password?</a></div>
+                            <div class="text-center"><button class="btn btn-primary btn-rounded" style="min-width: 200px">LOGIN</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-danger text-white p-5 d-flex flex-column justify-content-between">
+                    <h3 class="mb-0">Reidius</h3>
+                    <div>
+                        <h4 class="font-40 mb-4">Join our group</h4>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <div class="flexbox font-13 text-white-50"><span>2019 © All rights reserved</span><span><a class="text-white-50" href="#" style="border-bottom: 1px solid;">About</a><a class="ml-3 text-white-50" href="#" style="border-bottom: 1px solid;">Policy</a></span></div>
+                </div>
+            </div>
+        </div><a class="btn btn-link home-link" href="index.html"><span class="btn-icon"><i class="ti-arrow-left font-20"></i>Go Home</span></a>
+    </div><!-- BEGIN: Page backdrops-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div><!-- END: Page backdrops-->
+    <!-- CORE PLUGINS-->
+    <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script><!-- PAGE LEVEL PLUGINS-->
+    <script src="../../assets/vendors/jquery-validation/dist/jquery.validate.min.js"></script><!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            $('#login-form').validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                errorClass: 'invalid-feedback',
+                validClass: 'valid-feedback',
+                errorPlacement: function(error, element) {
+                    if (element.hasClass('md-form-control')) {
+                        error.insertAfter(element.closest('.md-form'));
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                highlight: function(e) {
+                    $(e).addClass("is-invalid").removeClass('is-valid');
+                },
+                unhighlight: function(e) {
+                    $(e).removeClass("is-invalid").addClass('is-valid');
+                },
+            });
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/login-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:59:03 GMT -->
+</html>
