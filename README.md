@@ -5,6 +5,6 @@ A Competition program running on Ethereum Blockchain, for the traveling salesman
 ## Authors
 
 * **Omer KORKMAZ** - *Owner*
-* **Atahan AKYILDIZ** - *Owner*
+* **Taha Atahan AKYILDIZ** - *Owner*
 * **Can Berk GUZGEREN** - *Owner*
 
