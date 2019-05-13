@@ -99,8 +99,8 @@ contract TSP {
     }
     //FRONT END CONNECTION
     //********************************************************
-    function upload_solution (uint256[] memory solution) public payable{
-        require(msg.value >= 1 ether && !hasClosed());
+    function upload_solution (uint256[] memory solution) public {
+        require(!hasClosed());
         if(validate_solution(solution)){
             winner = msg.sender;//update winner address
         }
