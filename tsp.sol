@@ -25,7 +25,7 @@
 
 [0, 3, 6, 1, 3, 0, 5, 2, 6, 5, 0, 10, 1, 2, 10, 0], 100000
 */
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.6;
 
 contract TSP {
 
@@ -135,7 +135,13 @@ contract TSP {
     
     function getPrize() public view returns(uint256)
     {
-        return prize;
+        return address(this).balance;
+    }
+    
+    
+    function getLength() public view returns(uint256)
+    {
+        return length;
     }
     
     //********************************************************
