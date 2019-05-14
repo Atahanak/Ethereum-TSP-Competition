@@ -31,7 +31,8 @@ contract TSP {
 
     uint256[] graph;
     uint256 length;
-    uint256 best_solution;
+    uint256 solution_cost;
+    uint256[] solution_array;
     address payable winner;
     uint closing_time;
     bool finished;
@@ -44,7 +45,8 @@ contract TSP {
         winner = address(uint160(address(this))); //put contract address as the winner
         closing_time = now + deadline;
         finished = false;
-        best_solution = 1000000; //temporary number will be changed
+        solution_cost = 0; //temporary number will be changed
+        solution_array = [0];
     }
     function getCoordinate(uint256 x, uint256 y) public view returns (uint256){
         require(x < length && y < length);
@@ -84,10 +86,14 @@ contract TSP {
         }*/ //not needed since length and visited check gurantees that all nodes are visited
         
         if(isCorrect){ //check the correctness of the solution
-            if(solLength < best_solution){
-                best_solution = solLength; //update solution
+            if(solution_cost == 0){
+                solution_cost = solLength;
+            }
+            else if(solLength < solution_cost){
+                solution_cost = solLength; //update solution
                 return true;
             }
+            solution_array = solution;
         }
         return false;
     }
@@ -109,7 +115,7 @@ contract TSP {
         return graph;
     }
     function getSolution() public view returns(uint256){
-        return best_solution;   
+        return solution_cost;   
     }
     function getAddress() public view returns(address){
         return winner;
