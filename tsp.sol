@@ -23,7 +23,7 @@
 
 3   1   2   10  0
 
-[0, 3, 6, 1, 3, 0, 5, 2, 6, 5, 0, 10, 1, 2, 10, 0], 4, 100000
+[0, 3, 6, 1, 3, 0, 5, 2, 6, 5, 0, 10, 1, 2, 10, 0], 100000
 */
 pragma solidity ^0.5.0;
 
@@ -36,11 +36,9 @@ contract TSP {
     address payable winner;
     uint closing_time;
     bool finished;
-    uint256 prize = 20 ether;
-    //deadline date
 
-    constructor(uint256[] memory input_graph, uint256 input_length, uint deadline) payable public {
-        length = input_length;
+    constructor(uint256[] memory input_graph, uint deadline) payable public {
+        length = sqrt(input_graph.length); // if graph size is halved multiply it with 2
         graph = input_graph;
         winner = address(uint160(address(this))); //put contract address as the winner
         closing_time = now + deadline;
@@ -55,10 +53,14 @@ contract TSP {
     function hasClosed() public view returns (bool) {
         return now > closing_time;
     }
-    
-    /*function sqrt(){
-        
-    }*/
+    function sqrt(uint x) public returns (uint y) {
+        uint z = (x + 1) / 2;
+        y = x;
+        while (z < y) {
+            y = z;
+            z = (x / z + z) / 2;
+        }
+    }
     function validate_solution (uint256[] memory solution) private returns(bool) {
         require(solution.length == length && !hasClosed());
         
@@ -101,7 +103,7 @@ contract TSP {
     function reward() public {
         require(!finished && hasClosed());
         finished = true;
-        winner.transfer(prize);
+        winner.transfer(address(this).balance);
     }
     //FRONT END CONNECTION
     //********************************************************
