@@ -107,10 +107,10 @@ contract TSP {
     }
     //FRONT END CONNECTION
     //********************************************************
-    function upload_solution (uint256[] memory solution) public {
+    function upload_solution (uint256[] memory solution, address payable addr) public {
         require(!hasClosed());
         if(validate_solution(solution)){
-            winner = msg.sender;//update winner address
+            winner = addr;//update winner address
         }
     }
     function getGraph()public view returns(uint256[] memory){
@@ -141,11 +141,9 @@ contract TSP {
         return address(this).balance;
     }
     
-    
     function getLength() public view returns(uint256)
     {
         return length;
     }
-    
     //********************************************************
 }
