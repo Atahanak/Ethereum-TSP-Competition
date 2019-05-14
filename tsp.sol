@@ -53,7 +53,7 @@ contract TSP {
     function hasClosed() public view returns (bool) {
         return now > closing_time;
     }
-    function sqrt(uint x) public returns (uint y) {
+    function sqrt(uint x) public pure returns (uint y) {
         uint z = (x + 1) / 2;
         y = x;
         while (z < y) {
@@ -93,9 +93,9 @@ contract TSP {
             }
             else if(solLength < solution_cost){
                 solution_cost = solLength; //update solution
-                return true;
             }
             solution_array = solution;
+            return true;
         }
         return false;
     }
