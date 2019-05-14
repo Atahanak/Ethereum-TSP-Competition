@@ -33,7 +33,7 @@
         }
     </style>
 
-    <script src="C:/Users/Omer/Desktop/ethProj/node_modules/web3/dist/web3.min.js"></script>
+    <script src="../../node_modules/web3/dist/web3.min.js"></script>
 </head>
 
 <body>
@@ -369,7 +369,7 @@
         }
         else {
             // set the provider you want from Web3.providers
-            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+            web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/92c6bba4dbc94a05915bbc91b592a668"));
         }
 
         web3.eth.defaultAccount = web3.eth.accounts[0];
@@ -539,7 +539,7 @@
             }
         ]);
 
-        var TSP = TSPContract.at('0x98d450c9ff05c8c26c12d1e1bb5f96ce2dd5265c');
+        var TSP = TSPContract.at('0x1019767cc74f0bca8901021987f24d1c6fb92b7d');
         console.log(TSP);
 
 
