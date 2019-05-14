@@ -363,242 +363,298 @@
 
 
     <script>
-        var web3;
-        if (typeof web3 !== 'undefined') {
-            web3 = new Web3(web3.currentProvider);
+        // var web3;
+        //  if (typeof web3 !== 'undefined') {
+        //   web3 = new Web3(web3.currentProvider);
+        // }
+        //  else {
+        //  //set the provider you want from Web3.providers
+        // web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/92c6bba4dbc94a05915bbc91b592a668"));
+        // }
+
+
+        function isInstalled() {
+            if (typeof web3 !== 'undefined') {
+                console.log('MetaMask is installed')
+            }
+            else {
+                console.log('MetaMask is not installed')
+            }
         }
-        else {
-            // set the provider you want from Web3.providers
-            web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/92c6bba4dbc94a05915bbc91b592a668"));
-        }
-
-        web3.eth.defaultAccount = web3.eth.accounts[0];
-        var TSPContract = web3.eth.contract([
-            {
-                "constant": false,
-                "inputs": [],
-                "name": "reward",
-                "outputs": [],
-                "payable": false,
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "constant": false,
-                "inputs": [
-                    {
-                        "name": "solution",
-                        "type": "uint256[]"
-                    }
-                ],
-                "name": "upload_solution",
-                "outputs": [],
-                "payable": true,
-                "stateMutability": "payable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "name": "input_graph",
-                        "type": "uint256[]"
-                    },
-                    {
-                        "name": "input_length",
-                        "type": "uint256"
-                    },
-                    {
-                        "name": "deadline",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": true,
-                "stateMutability": "payable",
-                "type": "constructor"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getAddress",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getClosingTime",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [
-                    {
-                        "name": "x",
-                        "type": "uint256"
-                    },
-                    {
-                        "name": "y",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "getCoordinate",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getGraph",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256[]"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getNowtime",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getPrize",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getSolution",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "hasClosed",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            }
-        ]);
-
-        var TSP = TSPContract.at('0xbef354b142e96d0fc05441aa62bc5356f3ff94b4');
-        console.log(TSP);
 
 
-        TSP.getSolution(function (error, result) {
-            if (!error) {
-                $("#divSolutionCost").text(result);
-            }
-            else
-                console.error(error);
-        });
+        // web3.eth.defaultAccount = web3.eth.accounts[0];
+        // var TSPContract = web3.eth.contract([
+        //     {
+        //         "constant": false,
+        //         "inputs": [],
+        //         "name": "reward",
+        //         "outputs": [],
+        //         "payable": false,
+        //         "stateMutability": "nonpayable",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": false,
+        //         "inputs": [
+        //             {
+        //                 "name": "solution",
+        //                 "type": "uint256[]"
+        //             }
+        //         ],
+        //         "name": "upload_solution",
+        //         "outputs": [],
+        //         "payable": false,
+        //         "stateMutability": "nonpayable",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "inputs": [
+        //             {
+        //                 "name": "input_graph",
+        //                 "type": "uint256[]"
+        //             },
+        //             {
+        //                 "name": "deadline",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": true,
+        //         "stateMutability": "payable",
+        //         "type": "constructor"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getAddress",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "address"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getClosingTime",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [
+        //             {
+        //                 "name": "x",
+        //                 "type": "uint256"
+        //             },
+        //             {
+        //                 "name": "y",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "name": "getCoordinate",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getGraph",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256[]"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getLength",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getNowtime",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getPrize",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getSolutionArray",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256[]"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "getSolutionCost",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [],
+        //         "name": "hasClosed",
+        //         "outputs": [
+        //             {
+        //                 "name": "",
+        //                 "type": "bool"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "view",
+        //         "type": "function"
+        //     },
+        //     {
+        //         "constant": true,
+        //         "inputs": [
+        //             {
+        //                 "name": "x",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "name": "sqrt",
+        //         "outputs": [
+        //             {
+        //                 "name": "y",
+        //                 "type": "uint256"
+        //             }
+        //         ],
+        //         "payable": false,
+        //         "stateMutability": "pure",
+        //         "type": "function"
+        //     }
+        // ]);
 
-        TSP.getAddress(function (error, result) {
-            if (!error) {
-                $("#divSolution").text(result);
-            }
-            else
-                console.error(error);
-        });
+        // var TSP = TSPContract.at('0x3422818d25fece828838aaed735ba086a2b2f0d2');
+        // console.log(TSP);
 
-        TSP.getPrize(function (error, result) {
-            if (!error) {
-                $("#divPrize").text(result);
-            }
-            else
-                console.error(error);
-        });
+        // TSP.getSolutionCost(function (error, result) {
+        //     if (!error) {
+        //         $("#divSolutionCost").text(result);
+        //     }
+        //     else
+        //         console.error(error);
+        // });
 
-        TSP.getGraph(function (error, result) {
-            if (!error) {
-                $("#divGraph").text(result);
-            }
-            else
-                console.error(error);
-        });
+        // TSP.getSolutionArray(function (error, result) {
+        //     if (!error) {
+        //         $("#divSolution").text(result);
+        //     }
+        //     else
+        //         console.error(error);
+        // });
+
+        // TSP.getPrize(function (error, result) {
+        //     if (!error) {
+        //         $("#divPrize").text(result);
+        //     }
+        //     else
+        //         console.error(error);
+        // });
+
+        // TSP.getGraph(function (error, result) {
+        //     if (!error) {
+        //         $("#divGraph").text(result);
+        //     }
+        //     else
+        //         console.error(error);
+        // });
 
 
-        TSP.hasClosed(function (error, result) {
-            if (!error) {
-                if (result === false) {
-                    $("#divTime").text("Not yet!");
-                }
-                else {
-                    $("#divTime").text("Finished!");
-                }
-            }
-            else
-                console.error(error);
-        });
+        // TSP.hasClosed(function (error, result) {
+        //     if (!error) {
+        //         if (result === false) {
+        //             $("#divTime").text("Not yet!");
+        //         }
+        //         else {
+        //             $("#divTime").text("Finished!");
+        //         }
+        //     }
+        //     else
+        //         console.error(error);
+        // });
 
-        //upload solution method
-        $("#btnUploadSol").click(function (error) {
-            TSP.upload_solution($("#inputSolution").val());
-            console.log("Upload Solution Error -->", error);
-            
-        });
 
-        $("#btnClear").click(function (error) {
-            $("#inputSolution").val("");
-        });
+        // //upload solution method
+        // $("#btnUploadSol").click(function (error) {
+        //     // Replace ile gereksiz sayı dışındakileri sil.
+        //     var valueArray = $("#inputSolution").val().split(",");
+
+        //     TSP.upload_solution([0, 1, 2, 3]);
+        //     location.reload();
+        // });
+
+        // $("#btnClear").click(function (error) {
+        //     $("#inputSolution").val("");
+        // });
 
 
     </script>
@@ -610,7 +666,5 @@
 
 </body>
 
-
-<!-- Mirrored from vaapthemes.com/themes/reidius/preview/html/demos/demo-1/crypto-wallet.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 May 2019 14:58:26 GMT -->
 
 </html>
