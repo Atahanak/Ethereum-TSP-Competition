@@ -116,8 +116,11 @@ contract TSP {
     function getGraph()public view returns(uint256[] memory){
         return graph;
     }
-    function getSolution() public view returns(uint256){
+    function getSolutionCost() public view returns(uint256){
         return solution_cost;   
+    }
+    function getSolutionArray() public view returns(uint256[] memory){
+        return solution_array;   
     }
     function getAddress() public view returns(address){
         return winner;
