@@ -25,17 +25,19 @@
 
 [0, 3, 6, 1, 3, 0, 5, 2, 6, 5, 0, 10, 1, 2, 10, 0], 100000
 */
-pragma solidity ^0.5.6;
+
+
+pragma solidity 0.5.6;
 
 contract TSP {
 
-    uint256[] graph;
-    uint256 length;
-    uint256 solution_cost;
-    uint256[] solution_array;
-    address payable winner;
-    uint closing_time;
-    bool finished;
+    uint256[] internal graph;
+    uint256 internal length;
+    uint256 internal solution_cost;
+    uint256[] internal solution_array;
+    address payable internal winner;
+    uint internal closing_time;
+    bool internal finished;
 
     constructor(uint256[] memory input_graph, uint deadline) payable public {
         length = sqrt(input_graph.length); // if graph size is halved multiply it with 2
@@ -69,7 +71,8 @@ contract TSP {
         bool isCorrect = true;
         visited[solution[0] / 256] |= (1 << (solution[0] & 255)); // mark starting node as visited
         
-        for(uint256 i = 1; i < length && isCorrect; i++){ // go over the solution
+        uint256 memLength = length;
+        for(uint256 i = 1; i < memLength && isCorrect; i++){ // go over the solution
             if( visited[solution[i] / 256] & (1 << (solution[i] & 255)) > 0){ //check if visited
                 isCorrect = false;
             }
@@ -107,10 +110,10 @@ contract TSP {
     }
     //FRONT END CONNECTION
     //********************************************************
-    function upload_solution (uint256[] memory solution, address payable addr) public {
+    function upload_solution (uint256[] memory solution) public {
         require(!hasClosed());
         if(validate_solution(solution)){
-            winner = addr;//update winner address
+            winner = msg.sender;//update winner address
         }
     }
     function getGraph()public view returns(uint256[] memory){
