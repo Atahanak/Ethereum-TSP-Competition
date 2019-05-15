@@ -671,7 +671,8 @@
                 console.log("TYPE: ", typeof result, result);
                 console.log("Length:", result.length);
                 var rowSize = Math.sqrt(result.length);
-                result.splice(rowSize, 0, result[rowSize] + '\n');
+                //result.splice(rowSize, 0, result[rowSize] + '\n');
+                result[rowSize] = result[rowSize] + '\n';
                 $("#divGraph").text(result);
             }
             else
@@ -720,7 +721,23 @@
 
 
         $("#btnSendReward").click(function (error) {
-            var hasFinished = TSP.hasClosed();
+            var hasFinished = "";
+
+            TSP.hasClosed(function (error, result) {
+                if (!error) {
+                    if (result === false) {
+                       hasFinished = false;
+                    }
+                    else {
+                       hasFinished = true;
+                    }
+                }
+                else
+                    console.error(error);
+            });
+
+            alert(hasFinished);
+
             if (hasFinished === false) {
                 alert("Time is not finished!")
             }
