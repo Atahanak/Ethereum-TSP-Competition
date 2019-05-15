@@ -638,7 +638,7 @@
             }
         ]);
 
-        var TSP = TSPContract.at('0xa4dc973888dc89ab908dd3ca454e2fdef782b437');
+        var TSP = TSPContract.at('0xbc2945529188ee70f00f15e6c42fd6d259b5ecd6');
         console.log(TSP);
 
         TSP.getSolutionCost(function (error, result) {
@@ -668,10 +668,10 @@
 
         TSP.getGraph(function (error, result) {
             if (!error) {
-                console.log("TYPE: ", typeof result);
+                console.log("TYPE: ", typeof result, result);
                 console.log("Length:", result.length);
                 var rowSize = Math.sqrt(result.length);
-                result.splice(rowSize, 0, '\n');
+                result.splice(rowSize, 0, result[rowSize] + '\n');
                 $("#divGraph").text(result);
             }
             else
@@ -720,8 +720,8 @@
 
 
         $("#btnSendReward").click(function (error) {
-            var hashFinished = TSP.hashFinished();
-            if (hashFinished === false) {
+            var hasFinished = TSP.hasClosed();
+            if (hasFinished === false) {
                 alert("Time is not finished!")
             }
             else {
