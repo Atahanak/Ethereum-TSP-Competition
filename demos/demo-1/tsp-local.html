@@ -33,7 +33,7 @@
         }
     </style>
 
-    <script src="/node_modules/web3/dist/web3.min.js"></script>
+    <script src="../../node_modules/web3/dist/web3.min.js"></script>
 </head>
 
 <body>
@@ -310,19 +310,6 @@
                                 </div>
                             </div>
 
-
-                            <div class="col-lg-6">
-                                <div class="card card-fullheight">
-                                    <div class="card-body">
-                                        <h5 class="box-title text-primary">GET REWARD</h5>
-                                        <form action="javascript:;">
-                                            <div class="form-group"><button class="btn btn-primary mr-2" type="submit"
-                                                    id="btnSendReward">SEND REWARD</button></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div><!-- END: Page content-->
                 </div><!-- BEGIN: Footer-->
@@ -366,45 +353,45 @@
     </div><!-- END: Page backdrops-->
     <!-- CORE PLUGINS-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="/assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="/assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendors/metismenu/dist/metisMenu.min.js"></script>
-    <script src="/assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
     <!-- PAGE LEVEL PLUGINS-->
     <!-- CORE SCRIPTS-->
-    <script src="assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
-    <script type="text/javascript" src="/node_modules/web3/dist/web3.min.js"></script>
+    <script src="/assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script type="text/javascript" src="../../node_modules/web3/dist/web3.min.js"></script>
 
     <script>
-        //const web3 = new Web3(Web3.givenProvider, null, {});
-        //      const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546', null, {});
+      //const web3 = new Web3(Web3.givenProvider, null, {});
+      //      const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546', null, {});
 
-        // var web3 = window.web3 ?  new Web3(window.web3.currentProvider) : new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/'));
-
-        window.addEventListener('load', async () => {
-            // Modern dapp browsers...
-            if (window.ethereum) {
-                window.web3 = new Web3(ethereum);
-                try {
-                    // Request account access if needed
-                    await ethereum.enable();
-                    // Acccounts now exposed
-                    //web3.eth.sendTransaction({/* ... */});
-                } catch (error) {
-                    // User denied account access...
-                }
+    // var web3 = window.web3 ?  new Web3(window.web3.currentProvider) : new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/'));
+        
+    window.addEventListener('load', async () => {
+    // Modern dapp browsers...
+        if (window.ethereum) {
+            window.web3 = new Web3(ethereum);
+            try {
+                // Request account access if needed
+                await ethereum.enable();
+                // Acccounts now exposed
+                //web3.eth.sendTransaction({/* ... */});
+            } catch (error) {
+                // User denied account access...
             }
-            // Legacy dapp browsers...
-            else if (window.web3) {
-                window.web3 = new Web3(web3.currentProvider);
-                // Acccounts always exposed
-                // web3.eth.sendTransaction({/* ... */});
-            }
-            // Non-dapp browsers...
-            else {
-                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-            }
-        });
+        }
+        // Legacy dapp browsers...
+        else if (window.web3) {
+            window.web3 = new Web3(web3.currentProvider);
+            // Acccounts always exposed
+        // web3.eth.sendTransaction({/* ... */});
+        }
+        // Non-dapp browsers...
+        else {
+            console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+        }
+});
         // var web3;
         //  if (typeof web3 !== 'undefined') {
         //   web3 = new Web3(web3.currentProvider);
@@ -414,7 +401,7 @@
         // web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/92c6bba4dbc94a05915bbc91b592a668"));
         // }
 
-
+        
         function isInstalled() {
             if (typeof web3 !== 'undefined') {
                 console.log('MetaMask is installed')
@@ -423,220 +410,220 @@
                 console.log('MetaMask is not installed')
             }
         }
-        function account() {
+        function account (){
             console.log(web3.eth.accounts);
         }
 
 
-        web3.eth.defaultAccount = web3.eth.accounts[0];
-        var TSPContract = web3.eth.contract([
-            {
-                "constant": false,
-                "inputs": [],
-                "name": "reward",
-                "outputs": [],
-                "payable": false,
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "constant": false,
-                "inputs": [
-                    {
-                        "name": "solution",
-                        "type": "uint256[]"
-                    }
-                ],
-                "name": "upload_solution",
-                "outputs": [],
-                "payable": false,
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "name": "input_graph",
-                        "type": "uint256[]"
-                    },
-                    {
-                        "name": "deadline",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": true,
-                "stateMutability": "payable",
-                "type": "constructor"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getAddress",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getClosingTime",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [
-                    {
-                        "name": "x",
-                        "type": "uint256"
-                    },
-                    {
-                        "name": "y",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "getCoordinate",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getGraph",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256[]"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getLength",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getNowtime",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getPrize",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getSolutionArray",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256[]"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getSolutionCost",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "hasClosed",
-                "outputs": [
-                    {
-                        "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [
-                    {
-                        "name": "x",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "sqrt",
-                "outputs": [
-                    {
-                        "name": "y",
-                        "type": "uint256"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "pure",
-                "type": "function"
-            }
-        ]);
+        //web3.eth.defaultAccount = web3.eth.accounts[0];
+        /*var TSPContract = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "reward",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "solution",
+				"type": "uint256[]"
+			}
+		],
+		"name": "upload_solution",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "input_graph",
+				"type": "uint256[]"
+			},
+			{
+				"name": "deadline",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getClosingTime",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "x",
+				"type": "uint256"
+			},
+			{
+				"name": "y",
+				"type": "uint256"
+			}
+		],
+		"name": "getCoordinate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getGraph",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getLength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getNowtime",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getPrize",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSolutionArray",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSolutionCost",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "hasClosed",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "x",
+				"type": "uint256"
+			}
+		],
+		"name": "sqrt",
+		"outputs": [
+			{
+				"name": "y",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	}
+]);
 
         var TSP = TSPContract.at('0xa4dc973888dc89ab908dd3ca454e2fdef782b437');
         console.log(TSP);
@@ -651,7 +638,7 @@
 
         TSP.getSolutionArray(function (error, result) {
             if (!error) {
-
+                
                 $("#divSolution").text(result);
             }
             else
@@ -668,10 +655,6 @@
 
         TSP.getGraph(function (error, result) {
             if (!error) {
-                console.log("TYPE: ", typeof result);
-                console.log("Length:", result.length);
-                var rowSize = Math.sqrt(result.length);
-                result.splice(rowSize, 0, '\n');
                 $("#divGraph").text(result);
             }
             else
@@ -698,17 +681,17 @@
             // Replace ile gereksiz sayı dışındakileri sil.
             var valueArray = $("#inputSolution").val().split(",");
 
-            TSP.upload_solution(valueArray, { from: web3.eth.defaultAccount }, function (error, result) {
-                if (!error) {
-                    if (result === false) {
-                        alert('Your solution couldn\'t be uploaded!');
-                    }
-                    else {
-                        alert('Your solution has been uploaded!');
-                    }
+            TSP.upload_solution(valueArray, {from:web3.eth.defaultAccount}, function(error, result) {
+            if (!error) {
+                if (result === false) {
+                    alert('Your solution couldn\'t be uploaded!');
                 }
-                else
-                    console.error(error);
+                else {
+                    alert('Your solution has been uploaded!');
+                }
+            }
+            else
+                console.error(error);
 
             });
             location.reload();
@@ -716,40 +699,7 @@
 
         $("#btnClear").click(function (error) {
             $("#inputSolution").val("");
-        });
-
-
-        $("#btnSendReward").click(function (error) {
-            var hasFinished = "";
-
-            TSP.hasClosed(function (error, result) {
-                if (!error) {
-                    if (result === false) {
-                       hasFinished = false;
-                    }
-                    else {
-                       hasFinished = true;
-                    }
-                }
-                else
-                    console.error(error);
-            });
-
-            alert(hasFinished);
-
-            if (hasFinished === false) {
-                alert("Time is not finished!")
-            }
-            else {
-                TSP.reward(function (error, result) {
-                    if (!error) {
-                        alert("Reward is sent to the winner!");
-                    }
-                    else
-                        console.error(error);
-                });
-            }
-        });
+        });*/
 
 
     </script>
