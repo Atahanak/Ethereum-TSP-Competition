@@ -228,7 +228,7 @@
                                                 style="height: 54px;width: 54px;font-size: 26px;"></i></div>
                                         <div class="mb-3 text-muted font-16">TSP DISTANCE MATRIX</div>
                                         <div class="h3 mb-4">
-                                            <div id="divGraph">20</div>
+                                            <div id="divGraph"></div>
                                             <span class="font-weight-normal"></span>
                                         </div>
                                         <hr>
@@ -641,7 +641,7 @@
             }
         ]);
 
-        var TSP = TSPContract.at('0x5d13db477087f16064a50f565cbe6d6eee9c46cb');
+        var TSP = TSPContract.at('0x9da969162ed2e37489b23bc412916c7e8bf84234');
         console.log(TSP);
 
         TSP.getSolutionCost(function (error, result) {
@@ -673,10 +673,22 @@
             if (!error) {
                 console.log("TYPE: ", typeof result, result);
                 console.log("Length:", result.length);
-                var rowSize = Math.sqrt(result.length) - 1;
+                var rowSize = Math.sqrt(result.length);
                 //result.splice(rowSize, 0, result[rowSize] + '\n');
-                result[rowSize] = result[rowSize] + '\n';
-                $("#divGraph").text(result);
+                //result[rowSize] = result[rowSize] + '/n';
+               
+                $("#divGraph").text(result[0]);
+                for(var i = 1; i < result.length; i++){
+                    var cond = i % rowSize;
+                    //console.log("cond: ", cond, "res: ", cond != 0, "RES:", result[i].c[0]);
+                    if(cond != 0) {
+                        $("#divGraph").append('\t' + result[i].c[0]);
+                    }
+                    else {
+                        $("#divGraph").append("<br>" + '\t' + result[i].c[0]);
+                    }
+                }
+                //$("#divGraph").text(result);
             }
             else
                 console.error(error);
