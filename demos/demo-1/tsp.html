@@ -414,6 +414,9 @@
         // web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/92c6bba4dbc94a05915bbc91b592a668"));
         // }
 
+        
+        var hasFinished = "";
+
 
         function isInstalled() {
             if (typeof web3 !== 'undefined') {
@@ -683,9 +686,11 @@
             if (!error) {
                 if (result === false) {
                     $("#divTime").text("Not yet!");
+                    hasFinished = result;
                 }
                 else {
                     $("#divTime").text("Finished!");
+                    hasFinished = true;
                 }
             }
             else
@@ -720,21 +725,6 @@
 
 
         $("#btnSendReward").click(function (error) {
-            var hasFinished = "";
-
-            TSP.hasClosed(function (error, result) {
-                if (!error) {
-                    if (result === false) {
-                       hasFinished = false;
-                    }
-                    else {
-                       hasFinished = true;
-                    }
-                }
-                else
-                    console.error(error);
-            });
-
             alert(hasFinished);
 
             if (hasFinished === false) {
