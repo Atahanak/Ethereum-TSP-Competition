@@ -33,7 +33,7 @@
         }
     </style>
 
-    <script src="/node_modules/web3/dist/web3.min.js"></script>
+    <script src="../../node_modules/web3/dist/web3.min.js"></script>
 </head>
 
 <body>
@@ -353,14 +353,14 @@
     </div><!-- END: Page backdrops-->
     <!-- CORE PLUGINS-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="/assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="/assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendors/metismenu/dist/metisMenu.min.js"></script>
-    <script src="/assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendors/metismenu/dist/metisMenu.min.js"></script>
+    <script src="../../assets/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
     <!-- PAGE LEVEL PLUGINS-->
     <!-- CORE SCRIPTS-->
-    <script src="assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
-    <script type="text/javascript" src="/node_modules/web3/dist/web3.min.js"></script>
+    <script src="/assets/js/app.min.js"></script><!-- PAGE LEVEL SCRIPTS-->
+    <script type="text/javascript" src="../../node_modules/web3/dist/web3.min.js"></script>
 
     <script>
       //const web3 = new Web3(Web3.givenProvider, null, {});
@@ -415,8 +415,8 @@
         }
 
 
-        web3.eth.defaultAccount = web3.eth.accounts[0];
-        var TSPContract = web3.eth.contract([
+        //web3.eth.defaultAccount = web3.eth.accounts[0];
+        /*var TSPContract = web3.eth.contract([
 	{
 		"constant": false,
 		"inputs": [],
@@ -655,10 +655,6 @@
 
         TSP.getGraph(function (error, result) {
             if (!error) {
-                console.log("TYPE: ", typeof result);
-                console.log("Length:", result.length);
-                var rowSize = Math.sqrt(result.length);
-                result.splice(rowSize, 0, '\n');
                 $("#divGraph").text(result);
             }
             else
@@ -703,7 +699,7 @@
 
         $("#btnClear").click(function (error) {
             $("#inputSolution").val("");
-        });
+        });*/
 
 
     </script>
