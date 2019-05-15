@@ -638,7 +638,7 @@
             }
         ]);
 
-        var TSP = TSPContract.at('0xbc2945529188ee70f00f15e6c42fd6d259b5ecd6');
+        var TSP = TSPContract.at('0x5d13db477087f16064a50f565cbe6d6eee9c46cb');
         console.log(TSP);
 
         TSP.getSolutionCost(function (error, result) {
@@ -670,7 +670,7 @@
             if (!error) {
                 console.log("TYPE: ", typeof result, result);
                 console.log("Length:", result.length);
-                var rowSize = Math.sqrt(result.length);
+                var rowSize = Math.sqrt(result.length) - 1;
                 //result.splice(rowSize, 0, result[rowSize] + '\n');
                 result[rowSize] = result[rowSize] + '\n';
                 $("#divGraph").text(result);
