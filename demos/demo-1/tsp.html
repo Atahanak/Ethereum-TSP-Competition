@@ -716,8 +716,24 @@
 
 
         $("#btnSendReward").click(function (error) {
-            var hashFinished = TSP.hashFinished();
-            if (hashFinished === false) {
+            var hasFinished = "";
+
+            TSP.hasClosed(function (error, result) {
+                if (!error) {
+                    if (result === false) {
+                       hasFinished = false;
+                    }
+                    else {
+                       hasFinished = true;
+                    }
+                }
+                else
+                    console.error(error);
+            });
+
+            alert(hasFinished);
+
+            if (hasFinished === false) {
                 alert("Time is not finished!")
             }
             else {
